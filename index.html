@@ -11,11 +11,11 @@
 
   <style>
     h1 {
-      font-family: "Helvetica Neue";
+      font-family: "Cormorant Garamond";
       color: black;
       text-align: center;
-      font-size: 3em;
-      font-weight: lighter;
+      font-size: 6.2em;
+      font-style: italic;
     }
 
     h2 {
@@ -27,14 +27,28 @@
     }
 
     h3 {
-      font-family: "Garamond";
+      font-family: "Helvetica Neue";
       color: black;
-      font-size: 1.5em;
+      font-size: 1.25em;
+      font-weight: lighter;
+      font-style: italic;
     }
 
     p {
       font-family: "Cormorant Garamond";
       font-size: 1.1em;
+    }
+
+    li {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+      text-indent: 20px;
+    }
+
+    ul {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+      text-indent: 20px;
     }
 
     /* h4 {
@@ -65,6 +79,10 @@
       background-color: gray;
     }
 
+    #iiif-map3 img {
+      filter: brightness(0.9)
+    }
+
     #iiif-map4 {
       /* position: fixed; */
       width: 100%;
@@ -72,22 +90,26 @@
       background-color: gray;
     }
 
-    /* .leaflet-tooltip {
-      font-size: 1em;
-      font-family: 'Garamond';
-      padding: 5px 8px;
+    #iiif-map5 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
     }
 
-    .leaflet-tooltip ul {
-      font-family: 'Garamond';
-      padding: 0px 20px;
-      margin: 0px;
-      line-height: 1.0em;
-      color: #333;
+    #iiif-map6 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
     }
 
-    .leaflet-tooltip li {
-      margin: 4px 0
+    .tab {
+      margin-left: 40px;
+    }
+
+    /* img {
+      border: 3px solid #555;
     } */
   </style>
 </head>
@@ -96,7 +118,8 @@
 
   <!-- Title -->
   <div class="container mt-2 p-4 bg-white text-dark">
-    <h1>Using Sanborn Maps to Explore the North Claiborne Business District</h1>
+    <h1>USING SANBORN MAPS</h1>
+    <h2 style="text-align:center; font-family:Cormorant Garamond">TO EXPLORE THE NORTH CLAIBORNE HISTORIC DISTRICT IN NEW ORLEANS, LA</h2>
     <!-- row -->
     <div class="row">
       <div class"col">
@@ -107,294 +130,585 @@
     <div class="card mb-3 bg-white">
       <img class="card-img-top" src="images/claiborne-1947-header.jpg" alt="Card image cap">
       <div class="card-body">
-        <h2 class="card-title">The Story of North Claiborne Avenue, New Orleans, LA</h2>
-        <p class="card-text">If you were standing at the intersection of Ursulines and North Claiborne in 1947, the intersection at which the above photo was taken, you'd be struck by a few things. Clocking in at 191-feet across, you'd notice that the sheer width of the street is breathtaking. The massive neutral
-          ground – a local term for what folks in the US generally call a "median" – would be lined by a row of live oak trees, verdant and generously shaded. Children might be playing in this <i>de facto</i> public park; pedestrians would ... ...
-          ...</p>
-        <p class="card-text">In New Orleans, North Claiborne Avenue has long been a bustling hub of Black business and local African American culture. This remains true today, as Claiborne is a popular gathering spot during second line parades.
-          However, the space itself is significantly different. In 1966, construction began on the I-10 expressway, which demolished the live oaks and the neutral ground that had been central to the character of the Claiborne Avenue business
-          district. ... ... ...</p>
-        <p class="card-text">This project is an attempt to pivot from narratives of destruction and dispossession in Black communities throughout the 20th century. Instead, it highlights the life on Claiborne Avenue in the 1940s and '50s. Use the
-          Sanborn maps below to explore selected businesses within the Claiborne corridor. Hover your mouse over the polygons for more information, or simply examine the maps.</p>
-        <p class="card-text"><small class="text-muted">Image courtesy of Tulane School of Architecture</small></p>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <h2 class="card-title">The Story of North Claiborne Avenue, New Orleans, LA</h2>
+            <p style="text-indent:20px">IF YOU WERE STANDING at the intersection of Ursulines and North Claiborne in 1947, the intersection at which the above photo was taken, you'd be struck by a few things. Clocking in at 191-feet across, you'd
+              notice
+              that
+              the sheer width of the street is breathtaking. The massive neutral
+              ground – a local term for what folks in the US generally call a "median" – would be lined by a row of live oak trees, verdant and generously shaded. Children might be playing in this <i>de facto</i> public park; pedestrians would ...
+              ...
+              ...</p>
+            <p style="text-indent:20px">In New Orleans, North Claiborne Avenue has long been a bustling hub of Black business and local African American culture. This remains true today, as Claiborne is a popular gathering spot during second line
+              parades.
+              However, the space itself is significantly different. In 1966, construction began on the I-10 expressway, which demolished the live oaks and the neutral ground that had been central to the character of the Claiborne Avenue business
+              district, erecting instead the snaking leviathan of concrete that remains to this day.</p>
+            <p style="text-indent:20px">This project is an attempt to pivot from narratives of destruction and dispossession in Black communities throughout the 20th century. Instead, it highlights the life on Claiborne Avenue in the 1940s and '50s.</p>
+            <h2 class="card-title">Sanborn Maps as Research Tools</h2>
+            <p style="text-indent:20px">Sanborn maps have a rich history as research tools. Developed in the mid-19th century to assess risk for fire insurance, they have proved an invaluable tool for historical research, thanks to their meticulous
+              detail and accuracy. The Library of Congress holds over 25,000 Sanborn maps in more than 3,000 US Cities, all available for perusal at <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">their
+                website</a>. In this case, we are using Sanborn maps to unearth different elements of the North Claiborne corridor's
+              <h2 class="card-title">Instructions for Navigating the Maps</h2>
+              <p style="text-indent:20px">The four Sanborn maps below have been lightly annotated to highlight select Black businesses and institutions that were active prior to the construction of I-10. Some are still active today, and although the
+                items highlighted were not always eradicated due to the construction of the overpass, the annotations are meant to gesture toward the critical community operations that the North Claiborne corridor served, including education,
+                insurance, and pharmaceutical needs to the Black community.
+                <li><b>Scroll to zoom</b> in and out of the maps.
+                <li><b>Click a polygon</b> to learn more information about the item it contains.
+                <li><b>Click the 'X,'</b> or anywhere else on the map, to close a popup after opening.
+                <li><b>See the key</b> for understanding <a target="blank" href="http://web.mit.edu/thecity/resources/abbreviations_for_sanborn_maps.pdf">Sanborn map abbreviations</a>.
+                <li><b>See the legend</b> for interpreting <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">Sanborn map colors</a>.
+                  <p></p>
+                  <p class="card-text"><small class="text-muted">Images courtesy of Tulane School of Architecture ...</small></p>
+          </div>
+          <div class="col-6 col-md-4">
+            <br>
+            <br>
+            <img src="https://static.wixstatic.com/media/8ea545_72814ed8c94f41d9a1cd7276c8a515af~mv2_d_2914_3413_s_4_2.jpg/v1/fill/w_447,h_524,al_c,q_90,usm_0.66_1.00_0.01/8ea545_72814ed8c94f41d9a1cd7276c8a515af~mv2_d_2914_3413_s_4_2.webp" width="325"
+              border="3px solid #555" alt="Card image cap">
+            <p style="font-style:italic; text-align:center; font-size:0.9em">The painted pillars underneath I-10.
 
-    <!-- Map row 1 starts -->
-    <div class="row mt-3 bg-white text-dark">
-      <div class="col-sm py-3 bg-white text-dark">
-        <div class="col">
-          <!-- <p class="lead">Lead test Lesasjndfliasndfjnkasdf
-          </p> -->
-        </div>
-        <div class="card" style="width: 100%;">
-          <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-          <div id="iiif-map1"></div>
 
-          <div class="card-body">
-            <h2 class="card-title">Vol. 1, Sheet 16 (1950)</h2>
-            <p class="card-text">Explore St. Bernard Circle, Circle Grocery, and the neutral ground of Claiborne Avenue.</p>
-            <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary">View original map</a>
+          </div>
+        </div>
+
+        <!-- Carousel test -->
+
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card" style="width: 100%;">
+                <div id="iiif-map1"></div>
+                <div class="card-body">
+                  <h2 class="card-title">Vol. 1, Sheet 16 (1950)</h2>
+                  <p class="card-text">Explore St. Bernard Circle, Circle Grocery, and the neutral ground of Claiborne Avenue.</p>
+                  <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card" style="width: 100%;">
+                <div id="iiif-map2"></div>
+                <div class="card-body">
+                  <h2 class="card-title">Vol. 1, Sheet 25 (1950)</h2>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-secondary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card" style="width: 100%;">
+                <div id="iiif-map3"></div>
+                <div class="card-body">
+                  <h2 class="card-title">Vol. 2, Sheet 107 (1940)</h2>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-secondary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div> -->
+
+        <!-- Map row 1 starts -->
+        <div class="row mt-3 bg-white text-dark">
+          <div class="col-sm py-3 bg-white text-dark">
+            <div class="col">
+            </div>
+            <div class="card" style="width: 100%;">
+              <div id="iiif-map1"></div>
+              <div class="card-body">
+                <h2 class="card-title">Exhibit 1: Vol. 1, Sheet 16 (1950)</h2>
+                <p class="card-text">Explore Circle Food Store and Beck's Restaurant. Learn about the neutral ground of Claiborne Avenue. Familiarize yourself with some conventions of Sanborn maps.</p>
+                <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm py-3 bg-white">
+            <div class="col">
+            </div>
+            <div class="card" style="width: 100%;">
+              <div id="iiif-map4"></div>
+              <div class="card-body">
+                <h2 class="card-title">Exhibit 2: Vol. 1, Sheet 25 (1950)</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Map row 1 ends, map row 2 starts -->
+        <div class="row mt-3 bg-white text-dark">
+          <div class="col-sm py-3 bg-white">
+            <div class="col">
+            </div>
+            <div class="card" style="width: 100%;">
+              <div id="iiif-map3"></div>
+              <div class="card-body">
+                <h2 class="card-title">Exhibit 3: Vol. 2, Sheet 107 (1940)</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm py-3 bg-white">
+            <div class="col">
+            </div>
+            <div class="card" style="width: 100%;">
+              <div id="iiif-map2"></div>
+              <div class="card-body">
+                <h2 class="card-title">Exhibit 4: Vol. 2, Sheet 125 (1940)</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Map 2 row ends, Map row 3 starts -->
+        <div class="row mt-3 bg-white text-dark">
+          <div class="col-sm py-3 bg-white">
+            <div class="col">
+            </div>
+            <div class="card" style="width: 100%;">
+              <div id="iiif-map5"></div>
+              <div class="card-body">
+                <h2 class="card-title">Exhibit 5: Vol. 2, Sheet 107 (1940)</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm py-3 bg-white">
+            <div class="col">
+            </div>
+            <div class="card" style="width: 100%;">
+              <div id="iiif-map6"></div>
+              <div class="card-body">
+                <h2 class="card-title">Exhibit 6: Vol. 2, Sheet 125 (1940)</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-sm py-3 bg-white">
-        <div class="col">
-        </div>
-        <div class="card" style="width: 100%;">
-          <div id="iiif-map4"></div>
-          <div class="card-body">
-            <h2 class="card-title">Card title</h2>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-secondary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Map row 1 ends, map row 2 starts -->
-    <div class="row mt-3 bg-white text-dark">
-      <div class="col-sm py-3 bg-white">
-        <div class="col">
-        </div>
-        <div class="card" style="width: 100%;">
-          <div id="iiif-map3"></div>
-          <div class="card-body">
-            <h2 class="card-title">Card title</h2>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-secondary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm py-3 bg-white">
-        <div class="col">
-          <!-- <p class="lead">Lead test Lesasjndfliasndfjnkasdf
-          </p> -->
-        </div>
-        <div class="card" style="width: 100%;">
-          <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-          <div id="iiif-map2"></div>
-          <div class="card-body">
-            <h2 class="card-title">Vol. 2, Sheet 25 (1940)</h2>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-secondary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
+
+      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+      <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v3.0.0/leaflet-iiif.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- make sure to import Leaflet-IIIF *after* the main Leaflet package -->
+      <script>
+        // Add maps
+
+        var maxBounds = [
+          [189.1875, -249],
+          [207.1875, 641],
+          [-682.8125, 611],
+          [-680.8125, -299]
+        ];
+
+        var map1 = L.map('iiif-map1', {
+            center: [-201.40625, 180.5],
+            crs: L.CRS.Simple,
+            zoom: 0,
+            zoomSnap: 0,
+            zoomDelta: 0
+          })
+          .setMaxBounds(maxBounds)
+          .setView([-238.8125, 169], 0.2);
+
+        var vol1sheet16_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0016/info.json').addTo(map1);
+
+        var map2 = L.map('iiif-map2', {
+            center: [0, 0],
+            crs: L.CRS.Simple,
+            zoom: 0
+          })
+          .setMaxBounds(maxBounds)
+          .setView([-238.8125, 169], 0.5);
+
+        var vol2sheet25_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0125/full/full/90/info.json').addTo(map2);
+
+        var map3 = L.map('iiif-map3', {
+            center: [0, 0],
+            crs: L.CRS.Simple,
+            zoom: 0
+          })
+          .setMaxBounds(maxBounds)
+          .setView([-238.8125, 169], 0.5);
+
+        var vol2sheet07_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0107/info.json').addTo(map3);
+
+        var map4 = L.map('iiif-map4', {
+            center: [0, 0],
+            crs: L.CRS.Simple,
+            zoom: 0
+          })
+          .setMaxBounds(maxBounds)
+          .setView([-238.8125, 169], 2);
+
+        var vol1sheet25_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map4);
+
+        var map5 = L.map('iiif-map5', {
+            center: [0, 0],
+            crs: L.CRS.Simple,
+            zoom: 0
+          })
+          .setMaxBounds(maxBounds)
+          .setView([-238.8125, 169], 0.5);
+
+        var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map5);
+
+        var map6 = L.map('iiif-map6', {
+            center: [0, 0],
+            crs: L.CRS.Simple,
+            zoom: 0
+          })
+          .setMaxBounds(maxBounds)
+          .setView([-238.8125, 169], 0.5);
+
+        var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map6);
+
+        // Get lat longs
+
+        map1.on('click', function(e) {
+          var marker = new L.marker(e.latlng).addTo(map1);
+          var latlng = map1.mouseEventToLatLng(e.originalEvent);
+          console.log(latlng.lat + ', ' + latlng.lng);
+        });
+
+        map2.on('click', function(e) {
+          var marker = new L.marker(e.latlng).addTo(map2);
+          var latlng = map2.mouseEventToLatLng(e.originalEvent);
+          console.log(latlng.lat + ', ' + latlng.lng);
+        });
+
+        map3.on('click', function(e) {
+          var marker = new L.marker(e.latlng).addTo(map3);
+          var latlng = map3.mouseEventToLatLng(e.originalEvent);
+          console.log(latlng.lat + ', ' + latlng.lng);
+        });
+
+        map4.on('click', function(e) {
+          var marker = new L.marker(e.latlng).addTo(map4);
+          var latlng = map4.mouseEventToLatLng(e.originalEvent);
+          console.log(latlng.lat + ', ' + latlng.lng);
+        });
+
+        // MAP 1 ELEMENTS
+
+        // Set coordinates for Map 1 polygons
+
+        var becksRest_coord = [
+          [-57.55078125, 114.0625],
+          [-57.67578125, 124.6875],
+          [-93.30078125, 125.4375],
+          [-93.30078125, 113.9375]
+        ]
+
+        var circleGrocery_coord = [
+          [-51.05078125, 251.8125],
+          [-49.92578125, 300.3125],
+          [-62.80078125, 303.1875],
+          [-76.42578125, 303.3125],
+          [-88.17578125, 300.6875],
+          [-92.80078125, 299.1875],
+          [-92.92578125, 288.9375],
+          [-101.05078125, 288.6875],
+          [-101.30078125, 254.1875],
+          [-88.05078125, 253.9375],
+          [-88.17578125, 252.5625]
+        ];
+
+        var neutralGround_coord = [
+          [-11.3515625, 56.875],
+          [-9.6015625, 174.375],
+          [-40.1015625, 174.375],
+          [-41.3515625, 56.875]
+        ];
+
+        var northArrow1_coord = [
+          [-226.1015625, 257.625],
+          [-182.1015625, 314.625],
+          [-203.8515625, 339.625],
+          [-252.3515625, 280.375]
+        ];
+
+        // Create Circle food store popup options and polygon
+
+        var circleFoodPopup = "<h2><b>Circle Food Store</b></h2>" + "<h3>1518 St. Bernard</h3>" +
+          "<p>This famous grocery at St. Bernard Circle was a hub of activity among locals. As Dodie Smith-Simmons recalls, “Anything you needed you could find at the Circle Food Store. Vendors would come in and sell their produce, their live chickens and turtles and whatever.”" +
+          "<p>" +
+          "<img src='https://static.wixstatic.com/media/8ea545_0920b120b8544dccb54062df232b2e14~mv2.jpg/v1/fill/w_679,h_530,al_c,q_90,usm_0.66_1.00_0.01/8ea545_0920b120b8544dccb54062df232b2e14~mv2.webp' alt='maptime logo gif' width='200px'/>";
+
+        var circleFoodPopup_options = {
+          'maxWidth': '200',
+          'className': 'custom',
+          'keepInView': 'True'
+        }
+
+        var circleGrocery = L.polygon(circleGrocery_coord, {
+          color: '#2A689A'
+        }).addTo(map1);
+        circleGrocery.on('click', function() {
+          map1.fitBounds(circleGrocery.getBounds());
+        });
+        circleGrocery.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          circleGrocery.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        circleGrocery.bindPopup(circleFoodPopup, circleFoodPopup_options);
+        circleGrocery.on('click', function(e) {
+          this.openPopup();
+        });
+        circleGrocery.on('', function(e) {
+          this.closePopup();
+        });
+
+        var myIcon = L.divIcon({
+          popupAnchor: [0, -30]
+        });
+
+        // Create neutral ground popup options and polygon
+
+        var neutralGroundPopup = "<h2><b>Neutral Ground</b></h2>" + "<h3>All along North Claiborne Avenue</h3>" +
+          "<p>As " + "<a target='blank' href='https://64parishes.org/neutral-ground'>Richard Campanella explains</a>" +
+          ", the term 'neutral ground' derives from the unique colonial politics of New Orleans in the early 19th century. The neutral ground of North Claiborne housed the longest continuous row of live oak trees in the country, and constituted a space for community gatherings, even large enough for children to play baseball." +
+          "<p>" +
+          "<img src='https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/a/cc/accd2865-12eb-5fc2-b37f-cce01de24b1d/5d13c56c7278d.image.jpg?crop=286%2C286%2C47%2C0&resize=1200%2C1200&order=crop%2Cresize' alt='CLaiborne live oaks' width='200px'/>";
+
+        var neutralGroundPopup_options = {
+          'maxWidth': '300',
+          'className': 'custom',
+          'keepInView': 'True'
+        }
+
+        var neutralGround = L.polygon(neutralGround_coord, {
+          color: '#2A689A'
+        }).addTo(map1);
+        neutralGround.on('click', function() {
+          map1.fitBounds(neutralGround.getBounds());
+        });
+        neutralGround.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          neutralGround.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        neutralGround.bindPopup(neutralGroundPopup, neutralGroundPopup_options);
+        neutralGround.on('click', function(e) {
+          this.openPopup();
+        });
+        neutralGround.on('', function(e) {
+          this.closePopup();
+        });
+
+        // Create Beck's restaurant popup
+
+        var becksRestPopup = "<h2><b>Neutral Ground</b></h2>" + "<h3>All along North Claiborne Avenue</h3>" +
+          "<p>As " + "<a target='blank' href='https://64parishes.org/neutral-ground'>Richard Campanella explains</a>" +
+          ", the term 'neutral ground' derives from the unique colonial politics of New Orleans in the early 19th century. The neutral ground of North Claiborne housed the longest continuous row of live oak trees in the country, and constituted a space for community gatherings, even large enough for children to play baseball." +
+          "<p>" +
+          "<img src='https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/a/cc/accd2865-12eb-5fc2-b37f-cce01de24b1d/5d13c56c7278d.image.jpg?crop=286%2C286%2C47%2C0&resize=1200%2C1200&order=crop%2Cresize' alt='CLaiborne live oaks' width='200px'/>";
+
+        var becksRestPopup_options = {
+          'maxWidth': '300',
+          'className': 'custom',
+          'keepInView': 'True'
+        }
+
+        var becksRest = L.polygon(becksRest_coord, {
+          color: '#2A689A'
+        }).addTo(map1);
+        becksRest.on('click', function() {
+          map1.fitBounds(becksRest.getBounds());
+        });
+        becksRest.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          becksRest.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        becksRest.bindPopup(becksRestPopup, becksRestPopup_options);
+        neutralGround.on('click', function(e) {
+          this.openPopup();
+        });
+        becksRest.on('', function(e) {
+          this.closePopup();
+        });
+
+        // Cre ate north arrow popup
+
+        var northArrow1 = L.polygon(northArrow1_coord, {
+          color: '#2A689A'
+        }).addTo(map1);
+        northArrow1.on('click', function() {
+          map1.fitBounds(northArrow1.getBounds());
+        });
+        northArrow1.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          northArrow1.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        northArrow1.bindPopup("<h3><b>People's Benevolent Life Insurance:</b></h3>" + "<p>In 1910, this building was home to the People\'s Benevolent (later the People\'s Industrial) Life Insurance, owned and founded by Walter Cohen.");
+        northArrow1.on('click', function(e) {
+          this.openPopup();
+        });
+        northArrow1.on('', function(e) {
+          this.closePopup();
+        });
+
+        // MAP 2 ELEMENTS
+
+        // Set coordinates for map 2 elements
+
+        var peoplesInsurance_coords = [
+          [-193.1015625, 231.875],
+          [-193.3515625, 257.625],
+          [-203.8515625, 257.875],
+          [-203.6015625, 231.875],
+        ];
+
+        var peoplesInsurance = L.polygon(peoplesInsurance_coords, {
+          color: '#2A689A'
+        }).addTo(map2);
+        peoplesInsurance.on('click', function() {
+          map2.fitBounds(peoplesInsurance.getBounds());
+        });
+        peoplesInsurance.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          peoplesInsurance.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        peoplesInsurance.bindPopup("<h3><b>People's Benevolent Life Insurance:</b></h3>" + "<p>In 1910, this building was home to the People\'s Benevolent (later the People\'s Industrial) Life Insurance, owned and founded by Walter Cohen.");
+        peoplesInsurance.on('click', function(e) {
+          this.openPopup();
+        });
+        peoplesInsurance.on('', function(e) {
+          this.closePopup();
+        });
+
+        // Map 3 elements
+
+        var funeralHome_coords = [
+          [-167.42578125, 186.4375],
+          [-167.67578125, 227.8125],
+          [-178.92578125, 227.8125],
+          [-178.92578125, 186.3125]
+        ];
+
+        var funeralHome = L.polygon(funeralHome_coords, {
+          color: '#2A689A'
+        }).addTo(map3);
+        funeralHome.on('click', function() {
+          map3.fitBounds(funeralHome.getBounds());
+        });
+        funeralHome.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          funeralHome.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        funeralHome.bindPopup("<h3><b>People's Benevolent Life Insurance:</b></h3>" + "<p>In 1910, this building was home to the People\'s Benevolent (later the People\'s Industrial) Life Insurance, owned and founded by Walter Cohen.");
+        funeralHome.on('click', function(e) {
+          this.openPopup();
+        });
+        funeralHome.on('', function(e) {
+          this.closePopup();
+        });
+
+        // Map 4 elements
+
+        var straightClg_coords = [
+          [-373.8515625, 101.125],
+          [-373.6015625, 117.875],
+          [-420.8515625, 118.625],
+          [-420.6015625, 101.875]
+        ];
+
+        var straightClg = L.polygon(straightClg_coords, {
+          color: '#2A689A'
+        }).addTo(map4);
+        straightClg.on('click', function() {
+          map4.fitBounds(straightClg.getBounds());
+        });
+        straightClg.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          straightClg.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        straightClg.bindPopup("<h3><b>People's Benevolent Life Insurance:</b></h3>" + "<p>In 1910, this building was home to the People\'s Benevolent (later the People\'s Industrial) Life Insurance, owned and founded by Walter Cohen.");
+        straightClg.on('click', function(e) {
+          this.openPopup();
+        });
+        straightClg.on('', function(e) {
+          this.closePopup();
+        });
+      </script>
+
+
+
+</body>
+
+<footer>
+  <div class="row mt-3 bg-white text-dark">
+    <div class="col-sm py-3 bg-white text-dark">
+      <p style="text-align:center">Bibliography:</p>
+      <ul>Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></ul>
+      <ul>Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></ul>
+      <ul>Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></ul>
+      <p style="text-align:center; font-style:italic">By <a target="blank" href="https://geography.as.uky.edu/users/itsp222">Ian Spangler</a> /// Find me on <a target="blank" href="https://github.com/itspangler">GitHub</a> /// Follow me on <a target="blank"
+          href="https://twitter.com/itspangler">Twitter</a></p>
+
     </div>
   </div>
-
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-  <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v3.0.0/leaflet-iiif.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <!-- make sure to import Leaflet-IIIF *after* the main Leaflet package -->
-  <script>
-    // Add maps
-
-    var map1 = L.map('iiif-map1', {
-      center: [0, 0],
-      crs: L.CRS.Simple,
-      zoom: 0
-    })
-    // .setView([-201.40625, 180.5])
-
-    var vol1sheet16_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0016/info.json').addTo(map1);
-
-    var map2 = L.map('iiif-map2', {
-      center: [0, 0],
-      crs: L.CRS.Simple,
-      zoom: 0
-    })
-    // .setView([-108.28125, 184.25]);
-
-    var vol2sheet25_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0125/info.json').addTo(map2);
-
-    var map3 = L.map('iiif-map3', {
-      center: [0, 0],
-      crs: L.CRS.Simple,
-      zoom: 0
-    })
-    // .setView([-108.28125, 184.25], 1.5);;
-
-    var vol2sheet07_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0107/info.json').addTo(map3);
-
-    var map4 = L.map('iiif-map4', {
-      center: [0, 0],
-      crs: L.CRS.Simple,
-      zoom: 0
-    })
-    // .setView([-108.28125, 184.25], 1.5);;
-
-    var vol1sheet25_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map4);
-
-    // Get lat longs
-
-    map1.on('click', function(e) {
-      var marker = new L.marker(e.latlng).addTo(map1);
-      var latlng = map1.mouseEventToLatLng(e.originalEvent);
-      console.log(latlng.lat + ', ' + latlng.lng);
-    });
-
-    map2.on('click', function(e) {
-      var marker = new L.marker(e.latlng).addTo(map2);
-      var latlng = map2.mouseEventToLatLng(e.originalEvent);
-      console.log(latlng.lat + ', ' + latlng.lng);
-    });
-
-    map3.on('click', function(e) {
-      var marker = new L.marker(e.latlng).addTo(map3);
-      var latlng = map3.mouseEventToLatLng(e.originalEvent);
-      console.log(latlng.lat + ', ' + latlng.lng);
-    });
-
-    // Map 1 elements
-
-    var circleGrocery_coord = [
-      [-51.05078125, 251.8125],
-      [-49.92578125, 300.3125],
-      [-62.80078125, 303.1875],
-      [-76.42578125, 303.3125],
-      [-88.17578125, 300.6875],
-      [-92.80078125, 299.1875],
-      [-92.92578125, 288.9375],
-      [-101.05078125, 288.6875],
-      [-101.30078125, 254.1875],
-      [-88.05078125, 253.9375],
-      [-88.17578125, 252.5625]
-    ];
-
-    var neutralGround_coord = [
-      [-11.3515625, 56.875],
-      [-9.6015625, 174.375],
-      [-40.1015625, 174.375],
-      [-41.3515625, 56.875]
-    ];
-
-    var northArrow1_coord = [
-      [-226.1015625, 257.625],
-      [-182.1015625, 314.625],
-      [-203.8515625, 339.625],
-      [-252.3515625, 280.375]
-    ];
-
-    var circleGrocery = L.polygon(circleGrocery_coord, {
-      color: '#2A689A'
-    }).addTo(map1);
-    circleGrocery.on('click', function() {
-      map1.fitBounds(circleGrocery.getBounds());
-    });
-    circleGrocery.on('mouseover', function() {
-      this.setStyle({
-        color: '#add8e6' //or whatever style you wish to use;
-      });
-      circleGrocery.on('mouseout', function() {
-        this.setStyle({
-          color: '#2A689A'
-        })
-      });
-    });
-
-    var neutralGround = L.polygon(neutralGround_coord, {
-      color: '#2A689A'
-    }).addTo(map1);
-    neutralGround.on('click', function() {
-      map1.fitBounds(neutralGround.getBounds());
-    });
-    neutralGround.on('mouseover', function() {
-      this.setStyle({
-        color: '#add8e6' //or whatever style you wish to use;
-      });
-      neutralGround.on('mouseout', function() {
-        this.setStyle({
-          color: '#2A689A'
-        })
-      });
-    });
-
-    var northArrow1 = L.polygon(northArrow1_coord, {
-      color: '#2A689A'
-    }).addTo(map1);
-    northArrow1.on('click', function() {
-      map1.fitBounds(northArrow1.getBounds());
-    });
-    northArrow1.on('mouseover', function() {
-      this.setStyle({
-        color: '#add8e6' //or whatever style you wish to use;
-      });
-      northArrow1.on('mouseout', function() {
-        this.setStyle({
-          color: '#2A689A'
-        })
-      });
-    });
-
-    // Map 2 elements
-
-    var peoplesInsurance_coords = [
-      [-193.1015625, 231.875],
-      [-193.3515625, 257.625],
-      [-203.8515625, 257.875],
-      [-203.6015625, 231.875],
-    ];
-
-    var peoplesInsurance = L.polygon(peoplesInsurance_coords, {
-      color: '#2A689A'
-    }).addTo(map2);
-    peoplesInsurance.on('click', function() {
-      map2.fitBounds(peoplesInsurance.getBounds());
-    });
-    peoplesInsurance.on('mouseover', function() {
-      this.setStyle({
-        color: '#add8e6' //or whatever style you wish to use;
-      });
-      peoplesInsurance.on('mouseout', function() {
-        this.setStyle({
-          color: '#2A689A'
-        })
-      });
-    });
-    peoplesInsurance.bindPopup("<h3><b>People's Benevolent Life Insurance:</b></h3>" + "<p>In 1910, this building was home to the People\'s Benevolent (later the People\'s Industrial) Life Insurance, owned and founded by Walter Cohen.");
-    peoplesInsurance.on('click', function(e) {
-      this.openPopup();
-    });
-    peoplesInsurance.on('', function(e) {
-      this.closePopup();
-    });
-
-    // Map 3 elements
-
-    var funeralHome_coords = [
-      [-167.42578125, 186.4375],
-      [-167.67578125, 227.8125],
-      [-178.92578125, 227.8125],
-      [-178.92578125, 186.3125]
-    ];
-
-    var funeralHome = L.polygon(funeralHome_coords, {
-      color: '#2A689A'
-    }).addTo(map3);
-    funeralHome.on('click', function() {
-      map3.fitBounds(funeralHome.getBounds());
-    });
-    funeralHome.on('mouseover', function() {
-      this.setStyle({
-        color: '#add8e6' //or whatever style you wish to use;
-      });
-      funeralHome.on('mouseout', function() {
-        this.setStyle({
-          color: '#2A689A'
-        })
-      });
-    });
-    funeralHome.bindPopup("<h3><b>People's Benevolent Life Insurance:</b></h3>" + "<p>In 1910, this building was home to the People\'s Benevolent (later the People\'s Industrial) Life Insurance, owned and founded by Walter Cohen.");
-    funeralHome.on('click', function(e) {
-      this.openPopup();
-    });
-    funeralHome.on('', function(e) {
-      this.closePopup();
-    });
-  </script>
-</body>
+</footer>
 
 </html>
