@@ -127,7 +127,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-12 col-md-8">
-            <h2 class="card-title">New Orleans' "Black Wall Street":<br>The North Claiborne Commercial Corridor</h2>
+            <h2 class="card-title">The North Claiborne Commercial Corridor</h2>
             <p style="text-indent:20px">IF YOU WERE STANDING at the intersection of Ursulines and North Claiborne in 1947, the intersection at which the above photo was taken, you'd be struck by a few things. Clocking in at 191-feet across, you'd
               notice that the sheer width of the street is breathtaking. Claiborne's massive neutral
               ground – a local term for what folks in the US generally call a "median" – would be lined by a row of live oak trees, verdant and generously shaded. Children might be playing baseball in this <i>de facto</i> public park, while
@@ -147,7 +147,7 @@
               limitations – of doing historical geographic research with Sanborn maps.</p>
               <br>
               <h2 class="card-title">Instructions for Navigating the Maps</h2>
-              <p style="text-indent:20px">THE SIX SANBORN MAPS below have been lightly annotated to highlight select Black businesses and institutions that were active prior to the construction of I-10. The businesses addressed education,
+              <p style="text-indent:20px">THE FIVE MAPS below have been lightly annotated to highlight select Black businesses and institutions that were active prior to the construction of I-10. The businesses addressed education,
                 insurance, pharmaceutical needs and more for the New Orleanian Black community. Some such businesses are still active today. While the
                 items highlighted below were not necessarily eradicated due to the construction of the overpass (e.g., Straight College was merged with New Orleans University to form Dillard U. in 1930), these annotations are meant to signify the
                 many critical community operations could be found along the North Claiborne corridor during the early and mid-twentieth century.</p><br>
@@ -231,7 +231,7 @@
               <div id="iiif-map2"></div>
               <div class="card-body">
                 <h2 class="card-title">Exhibit 4: Vol. 2, Sheet 125 (1940)</h2>
-                <p class="card-text">The lakeside blocks of North Claiborne between Orleans and St. Philip (note the map is rotated 90° counterclockwise). Explore People's Benevolent Life Insurance and learn about the clubs along North Claiborne.</p><br>
+                <p class="card-text">The lakeside blocks of North Claiborne between Orleans and St. Philip (note the map is rotated 90° counterclockwise). Explore People's Benevolent Life Insurance and see how the space looks today.</p><br>
                 <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
               </div>
             </div>
@@ -246,12 +246,12 @@
               <div id="iiif-map5"></div>
               <div class="card-body">
                 <h2 class="card-title">Exhibit 5: Vol. 2, Sheet 106 (1940)</h2>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">The intersection of North Claiborne and Orleans Avenues. Explore the Treme Market, LaBranche's Pharmacy, and the Treme Market Branch Bank.</p>
                 <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
               </div>
             </div>
           </div>
-          <div class="col-sm py-3 bg-white">
+          <!-- <div class="col-sm py-3 bg-white">
             <div class="col">
             </div>
             <div class="card" style="width: 100%;">
@@ -262,7 +262,7 @@
                 <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 </div>
@@ -347,56 +347,56 @@
 
         var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0106/info.json').addTo(map5);
 
-        var map6 = L.map('iiif-map6', {
-            center: [0, 0],
-            crs: L.CRS.Simple,
-            zoom: 0,
-            zoomSnap: 0,
-            zoomdelta: 1,
-            scrollWheelZoom: false
-          })
-          .setMaxBounds(maxBounds)
-          .setView([-238.8125, 169], 0.2);
-
-        var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map6);
+        // var map6 = L.map('iiif-map6', {
+        //     center: [0, 0],
+        //     crs: L.CRS.Simple,
+        //     zoom: 0,
+        //     zoomSnap: 0,
+        //     zoomdelta: 1,
+        //     scrollWheelZoom: false
+        //   })
+        //   .setMaxBounds(maxBounds)
+        //   .setView([-238.8125, 169], 0.2);
+        //
+        // var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map6);
 
         // Get lat longs
 
-        map1.on('click', function(e) {
-          var marker = new L.marker(e.latlng).addTo(map1);
-          var latlng = map1.mouseEventToLatLng(e.originalEvent);
-          console.log(latlng.lat + ', ' + latlng.lng);
-        });
-
-        map2.on('click', function(e) {
-          var marker = new L.marker(e.latlng).addTo(map2);
-          var latlng = map2.mouseEventToLatLng(e.originalEvent);
-          console.log(latlng.lat + ', ' + latlng.lng);
-        });
-
-        map3.on('click', function(e) {
-          var marker = new L.marker(e.latlng).addTo(map5);
-          var latlng = map3.mouseEventToLatLng(e.originalEvent);
-          console.log(latlng.lat + ', ' + latlng.lng);
-        });
-
-        map4.on('click', function(e) {
-          var marker = new L.marker(e.latlng).addTo(map4);
-          var latlng = map4.mouseEventToLatLng(e.originalEvent);
-          console.log(latlng.lat + ', ' + latlng.lng);
-        });
-
-        map5.on('click', function(e) {
-          var marker = new L.marker(e.latlng).addTo(map5);
-          var latlng = map4.mouseEventToLatLng(e.originalEvent);
-          console.log(latlng.lat + ', ' + latlng.lng);
-        });
-
-        map6.on('click', function(e) {
-          var marker = new L.marker(e.latlng).addTo(map6);
-          var latlng = map4.mouseEventToLatLng(e.originalEvent);
-          console.log(latlng.lat + ', ' + latlng.lng);
-        });
+        // map1.on('click', function(e) {
+        //   var marker = new L.marker(e.latlng).addTo(map1);
+        //   var latlng = map1.mouseEventToLatLng(e.originalEvent);
+        //   console.log(latlng.lat + ', ' + latlng.lng);
+        // });
+        //
+        // map2.on('click', function(e) {
+        //   var marker = new L.marker(e.latlng).addTo(map2);
+        //   var latlng = map2.mouseEventToLatLng(e.originalEvent);
+        //   console.log(latlng.lat + ', ' + latlng.lng);
+        // });
+        //
+        // map3.on('click', function(e) {
+        //   var marker = new L.marker(e.latlng).addTo(map5);
+        //   var latlng = map3.mouseEventToLatLng(e.originalEvent);
+        //   console.log(latlng.lat + ', ' + latlng.lng);
+        // });
+        //
+        // map4.on('click', function(e) {
+        //   var marker = new L.marker(e.latlng).addTo(map4);
+        //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
+        //   console.log(latlng.lat + ', ' + latlng.lng);
+        // });
+        //
+        // map5.on('click', function(e) {
+        //   var marker = new L.marker(e.latlng).addTo(map5);
+        //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
+        //   console.log(latlng.lat + ', ' + latlng.lng);
+        // });
+        //
+        // map6.on('click', function(e) {
+        //   var marker = new L.marker(e.latlng).addTo(map6);
+        //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
+        //   console.log(latlng.lat + ', ' + latlng.lng);
+        // });
 
         // MAP 1 ELEMENTS
 
@@ -1099,11 +1099,11 @@
 <footer>
   <div class="row mt-3 bg-white text-dark">
     <div class="col-sm py-3 bg-white text-dark">
-      <p style="text-align:center">Bibliography:</p>
+      <!-- <p style="text-align:center">Bibliography:</p><br>
+      <p style="text-align:center"><i>Treme: Race and Place in a New Orleans Neighborhood</i> by Michael Crutcher</p>
+      <p style="text-align:center"><i>Creole Italian: Sicilian Immigrants and the Shaping of New Orleans Food Culture</i> by Justin Nystrom</p>
       <p style="text-align:center">Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></p>
-      <p style="text-align:center">Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></p>
-      <p style="text-align:center">Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></p>
-      <br>
+      <br> -->
       <p style="text-align:center; font-style:italic">By <a target="blank" href="https://geography.as.uky.edu/users/itsp222">Ian Spangler</a> /// Find me on <a target="blank" href="https://github.com/itspangler">GitHub</a> /// Follow me on <a target="blank"
           href="https://twitter.com/itspangler">Twitter</a></p>
     </div>
