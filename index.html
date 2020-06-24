@@ -142,7 +142,7 @@
               <br>
             <h2 class="card-title">Sanborn Maps as Research Tools</h2>
             <p style="text-indent:20px">SANBORN MAPS have a rich history as research tools. Developed in the mid-19th century to assess risk for fire insurance, they have proved an invaluable tool for historical research, thanks to their meticulous
-              detail and accuracy. The Library of Congress has digitized over 25,000 Sanborn maps in more than 3,000 US Cities, all available for perusal at <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">their
+              detail and accuracy. The Library of Congress has digitized over 25,000 Sanborn maps in more than 3,000 US cities, all available for perusal at <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">their
                 website</a>. In this case, we are using Sanborn maps to unearth different elements of the North Claiborne corridor's commercial district. In doing so, we will also identify some methodological elements – opportunities <i>and</i>
               limitations – of doing historical geographic research with Sanborn maps.</p>
               <br>
@@ -218,7 +218,7 @@
               <div id="iiif-map3"></div>
               <div class="card-body">
                 <h2 class="card-title">Exhibit 3: Vol. 2, Sheet 107 (1940)</h2>
-                <p class="card-text">The 900 and 1000 blocks of North Claiborne, the boundaries of this map land in the heart of the Treme neighborhood. Explore the Charbonnet Funeral Home and a residential block of Treme. Learn about how urban
+                <p class="card-text">The 900 and 1000 blocks of North Claiborne, the boundaries of this map land in the heart of the Treme neighborhood. Explore the Charbonnet Funeral Home, the Economy Society, and a residential block of Treme. Learn about how urban
                   renewal projects affected the Treme neighborhood in the 1960s and 1970s.</p>
                 <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
               </div>
@@ -265,7 +265,7 @@
           </div>
         </div>
       </div>
-
+</div>
       <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
       <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v3.0.0/leaflet-iiif.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -553,7 +553,7 @@
         // Create north arrow popup
 
         var northArrowPopup = "<h2><b>North Arrow</b></h2>" + "<h3>Sanborn Maps</h3>" +
-          "<p>Note the direction of the North Arrow on this map. Sanborn maps are not all oriented in the same direction. As you interpret the maps, be advised that some Sanborns are rotated in a different direction (e.g., Exhibits 3 and 4)</p>";
+          "<p>Note the direction of the North Arrow on this map. Sanborn maps are not all oriented in the same direction. As you interpret the maps, be advised that some Sanborns are rotated in a different direction (e.g., Exhibits 3 and 4).</p>";
 
         var northArrowPopup_options = {
           'maxWidth': '300',
@@ -716,10 +716,10 @@
         // Map 3 elements
 
         var tremeCommCenter_coords = [
-          [-349.2576279527559, 38.23228346456693],
-          [-351.21825787401576, 163.05905511811025],
-          [-445.32849409448824, 160.4448818897638],
-          [-445.32849409448824, 39.53937007874016]
+          [-347.2576279527559, 40.23228346456693],
+          [-348.21825787401576, 163.05905511811025],
+          [-444.32849409448824, 160.4448818897638],
+          [-443.32849409448824, 39.53937007874016]
         ]
 
         var tremeCommCenterPopup = "<h2><b>A Block of the Treme</b></h2>" + "<h3>Bounded by N. Villere, St. Philip, Marais, and Dumaine</h3>" +
@@ -797,6 +797,47 @@
           this.closePopup();
         });
 
+        var mutualAid_coords = [
+          [-375.5851171875, 258.50624999999997],
+          [-375.84011718749997, 299.94374999999997],
+          [-395.73011718749996, 299.30625],
+          [-388.4626171875, 257.99625]
+        ]
+
+        var mutualAidPopup = "<h2><b>Economy Mutual Aid Hall</b></h2>" + "<h3>1422 Ursulines</h3>" +
+          "<p>This building served as the second location for the Economy Society. Founded in 1836, the Economy Society operated for over a century, and exceeded 160 members at its peak. The large, two-story building hosted various banquets and soirees that became central fixtures of the developing jazz culture. Read more at Vol. XVIII of <a target='blank' href='https://jazz.tulane.edu/sites/default/files/jazz/docs/jazz_archivist/Jazz_Archivist_vol18_2004.pdf'><i>The Jazz Archive</i></a>.</p>" +
+          "<img src='images/econ-hall.jpg' width='300px'>";
+
+        var mutualAidPopup_options = {
+          'maxWidth': '300',
+          'className': 'custom',
+          'keepInView': 'True'
+        }
+
+        var mutualAid = L.polygon(mutualAid_coords, {
+          color: '#2A689A'
+        }).addTo(map3);
+        mutualAid.on('click', function() {
+          map3.fitBounds(mutualAid.getBounds());
+        });
+        mutualAid.on('mouseover', function() {
+          this.setStyle({
+            color: '#add8e6' //or whatever style you wish to use;
+          });
+          mutualAid.on('mouseout', function() {
+            this.setStyle({
+              color: '#2A689A'
+            })
+          });
+        });
+        mutualAid.bindPopup(mutualAidPopup, mutualAidPopup_options);
+        mutualAid.on('click', function(e) {
+          this.openPopup();
+        });
+        mutualAid.on('', function(e) {
+          this.closePopup();
+        });
+
         // Map 4 elements
 
         var straightClg_coords = [
@@ -848,7 +889,7 @@
         ]
 
         var palimpsestPopup = "<h2><b>Sanborn map palimpsests</b></h2>" + "<h3>A feature of Sanborn maps</h3>" +
-          "<p>Strictly defined, the word 'palimpsest' refers to a piece of writing in which the original text has been effaced to make room for new writing, but of which traces still remain. Look closely at the map canvsas highlighted here, and you'll notice that something's off: at 1413 North Claiborne, someone has pasted a sheet of paper on top of the Sanborn map. These '<a target'blank' href='https://books.google.com/books?id=fOSWLh-6UZsC&pg=PA231&lpg=PA231&dq=sanborn+map+palimpsest&source=bl&ots=o-HUTDkJWi&sig=ACfU3U3gEwNSRarkYFI9CXhIzQ7DOl88pQ&hl=en&sa=X&ved=2ahUKEwj4oqj9l5bqAhUyRTABHZgiB_0Q6AEwCXoECAoQAQ#v=onepage&q=sanborn%20map%20palimpsest&f=false'>paste-on additions</a>' were a common practice of the Sanborn map company's surveyors. Instead of re-surveying the entire city every time a map needed to be updated, the surveyor would save precious time and simply paste updates on top of the existing maps. In doing so, they produced <a target='blank' href='https://aag.secure-abstracts.com/AAG%20Annual%20Meeting%202018/abstracts-gallery/13930'>Sanborn map palimpsests</a>, wherein the maps accumulated additions, but a reader could still apprehend traces of the original.</p>" +
+          "<p>Strictly defined, the word 'palimpsest' refers to a piece of writing in which the original text has been effaced to make room for new writing, but of which traces still remain. Look closely at the map canvsas highlighted here, and you'll notice that something's off: at 1413 North Claiborne, someone has pasted a sheet of paper on top of the Sanborn map. These '<a target'blank' href='https://books.google.com/books?id=fOSWLh-6UZsC&pg=PA231&lpg=PA231&dq=sanborn+map+palimpsest&source=bl&ots=o-HUTDkJWi&sig=ACfU3U3gEwNSRarkYFI9CXhIzQ7DOl88pQ&hl=en&sa=X&ved=2ahUKEwj4oqj9l5bqAhUyRTABHZgiB_0Q6AEwCXoECAoQAQ#v=onepage&q=sanborn%20map%20palimpsest&f=false'>paste-on additions</a>' were a common practice of the Sanborn map company's surveyors. Instead of re-surveying the entire city every time a map needed to be updated, the surveyor would save precious time and simply paste updates on top of the existing maps. In doing so, they produced what Jack Swab has called <a target='blank' href='https://aag.secure-abstracts.com/AAG%20Annual%20Meeting%202018/abstracts-gallery/13930'>Sanborn map palimpsests</a>, wherein the maps accumulated additions, but a reader could still apprehend traces of the original.</p>" +
           "<p>How many palimpsests can you identify within this address? What about across all 6 exhibits?</p>";
 
         var palimpsestPopup_options = {
@@ -893,7 +934,8 @@
         ];
 
         var tremeMarketBankPopup = "<h2><b>Treme Market Branch of the Canal-Commercial Trust and Savings Bank</b></h2>" + "<h3>800 North Claiborne</h3>" +
-          "<p>Text</p>";
+          "<p>This bank opened in 1925 to serve the Treme neighborhood. A headline in the local paper, the <i>Times Picayune</i>, praised it as '<a target='blank' href='https://www.trememarketbranch.com/history'>perhaps the most unique and interesting of the branch banks in the city</a>.' It has undergone various ownership changes through the years, transforming into a leather shop in 1953, and was repurposed as an event space in 2016.</p>" +
+          "<img src='images/bank.jpeg' alt='Jazz funeral' width='300px'/>";
 
         var tremeMarketBankPopup_options = {
           'maxWidth': '300',
@@ -932,8 +974,9 @@
           [-130.994296875, 102.82875]
         ]
 
-        var labranchePharmPopup = "<h2><b>Treme Market Branch of the Canal-Commercial Trust and Savings Bank</b></h2>" + "<h3>800 North Claiborne</h3>" +
-          "<p>https://www.nola.com/entertainment_life/home_garden/article_67057f83-786d-52b9-aa9d-c63c143c6247.html, p. 146 of Nystrom</p>";
+        var labranchePharmPopup = "<h2><b>LaBranche's Pharmacy</b></h2>" + "<h3>716 North Claiborne</h3>" +
+          "<p>According to the <a href='http://amistadresearchcenter.tulane.edu/archon/?p=accessions/accession&id=1125' target='blank'>Amistad Research Center</a>, LaBranche's Drug Store opened in 1907. The Woods Directory below has LaBranche's listed at 716 N. Claiborne, intersecting Orleans Avenue, and 716 North Claiborne . The location <a href='http://www.creolegen.org/2013/02/11/belfields-pharmacy-1925-1955/' target='blank'>may have moved to 818 N. Claiborne</a> by 1918 (just a block to the right on this same map). Regardless of its absolute location, it was <a href='http://amistadresearchcenter.tulane.edu/archon/?p=accessions/accession&id=1125' target='blank'>fondly remembered</a> by residents and </p>" +
+          "<img src='https://ksr-ugc.imgix.net/assets/022/291/060/81c5f1c88f62921bcd37fbe6fe63cb62_original.png?ixlib=rb-2.1.0&w=680&fit=max&v=1534805702&auto=format&frame=1&lossless=true&s=b83301b0d783469a99b87a1899db4c9e' width='300px'>";
 
         var labranchePharmPopup_options = {
           'maxWidth': '300',
@@ -972,8 +1015,10 @@
           [-331.09359374999997, 79.6875]
         ]
 
-        var historicTremeMarkPopup = "<h2><b>Treme Market Branch of the Canal-Commercial Trust and Savings Bank</b></h2>" + "<h3>800 North Claiborne</h3>" +
-          "<p>https://www.nola.com/entertainment_life/home_garden/article_67057f83-786d-52b9-aa9d-c63c143c6247.html, p. 146 of Nystrom</p>";
+        var historicTremeMarkPopup = "<h2><b>Original Location of Treme Market</b></h2>" + "<h3>Orleans Avenue neutral ground</h3>" +
+          "<p>Starting in the early 19th century, the neutral ground at Orleans Avenue hosted the original Treme Market. Although it was described as dilapidated by the 1930s, it functioned as a <a target='blank' href='https://www.trememarketbranch.com/history'>hub of social and commercial activity</a> and helped to create the conditions for other businesses at the Orleans and North Claiborne intersection to flourish.</p>" +
+          "<img src='https://upload.wikimedia.org/wikipedia/commons/7/7e/Treme_Market_Arch_2_New_Orleans.jpg' width='300px'>"
+          ;
 
         var historicTremeMarkPopup_options = {
           'maxWidth': '300',
@@ -1014,8 +1059,8 @@
           [-309.16359374999996, 24.862499999999997]
         ]
 
-        var tremeMarketBldgPopup = "<h2><b>Treme Market Branch of the Canal-Commercial Trust and Savings Bank</b></h2>" + "<h3>800 North Claiborne</h3>" +
-          "<p>https://www.nola.com/entertainment_life/home_garden/article_67057f83-786d-52b9-aa9d-c63c143c6247.html, p. 146 of Nystrom</p>";
+        var tremeMarketBldgPopup = "<h2><b>Historic Treme Market</b></h2>" + "<h3>1508-1516 Orleans</h3>" +
+          "<p>New Orleans has a vibrant market culture that dates back to the 18th century. The original Treme Market was located on the neutral ground of Orleans Avenue, just across from this location at 1508 Orleans. At its peak, as <a href='https://ugapress.org/book/9780820353555/creole-italian/' target='blank'>Justin Nystrom</a> has observed, the Treme Market was one of the only markets that rivaled the size and scope of the famous French Market. The Treme Market bustled with activity between its completion in 1933 and the public market system's declassification in 1946; according to an <a href='https://www.nps.gov/nr/feature/places/pdfs/16000711.pdf' target='blank'>application for its listing on the National Register of Historic Places</a>, the Market had sixteen stalls and bore great cultural significance that extended beyond the Treme neighborhood and into the city's 'changing philosophy of how food marketing sites should look and function.'</p>";
 
         var tremeMarketBldgPopup_options = {
           'maxWidth': '300',
