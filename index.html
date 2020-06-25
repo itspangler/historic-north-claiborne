@@ -12,6 +12,13 @@
   <link rel="icon" href="images/icon.png" type="image/png" sizes="16x16">
 
   <style>
+
+    body {
+        /* background-color: #7f7f7f; */
+        margin: 0;
+        padding-top: 30px;
+    }
+
     h1 {
       font-family: "Cormorant Garamond";
       color: black;
@@ -36,6 +43,19 @@
       font-style: italic;
     }
 
+    #map-gallery {
+      font-family: "Cormorant Garamond";
+      color: black;
+      text-align: center;
+      font-size: 6.2em;
+      /* font-style: italic; */
+    }
+
+    #background {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+    }
+
     p {
       font-family: "Cormorant Garamond";
       font-size: 1.1em;
@@ -53,6 +73,7 @@
       font-size: 1.1em;
       text-indent: 20px;
       list-style-position: outside;
+      top: 0;
     }
 
     #iiif-map1 {
@@ -106,6 +127,17 @@
       margin-left: 40px;
     }
 
+    .divLast {
+       top: 0px;
+       margin:0px;
+       padding: 0px 2px 2px 3px;
+       border-width: 2px;
+       border-bottom-width:2px;
+       border-bottom-color:#ddd;
+       border-bottom-style: solid;
+       width: 100%;
+    }
+
     /* img {
       border: 3px solid #555;
     } */
@@ -114,6 +146,35 @@
 
 <body>
   <!-- Title -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white divLast">
+    <div class="container">
+      <a style="font-family:Cormorant Garamond" class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#background">Background <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#map-gallery">Map Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exhibits
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#iiif-map1">Exhibit 1</a>
+              <a class="dropdown-item" href="#iiif-map4">Exhibit 2</a>
+              <a class="dropdown-item" href="#iiif-map3">Exhibit 3</a>
+              <a class="dropdown-item" href="#iiif-map2">Exhibit 4</a>
+              <a class="dropdown-item" href="#iiif-map5">Exhibit 5</a>
+            </div>
+      </div>
+    </div>
+  </nav>
   <div class="container mt-2 p-4 bg-white text-dark">
     <h1>USING SANBORN MAPS</h1>
     <h2 style="text-align:center; font-family:Cormorant Garamond">TO EXPLORE THE NORTH CLAIBORNE HISTORIC DISTRICT IN NEW ORLEANS, LA</h2>
@@ -125,7 +186,7 @@
     <!-- Title end -->
     <div class="card mb-3 bg-white">
       <img class="card-img-top" src="images/claiborne-1947-header.jpg" alt="Card image cap">
-      <p class="card-text" style="text-align:center"><small class="text-muted">North Claiborne Avenue at the intersection of Ursulines and Claiborne, 1951. (<a target='blank' href='https://architecture.tulane.edu/sites/architecture.tulane.edu/files/styles/gallery-popup/public/timeline-entry//img_3_1979.325.5136.jpg?itok=LPezOyuo'>Source</a>)</small></p>
+      <div id="background" class="card-text" style="text-align:center"><small class="text-muted">North Claiborne Avenue at the intersection of Ursulines and Claiborne, 1951. (<a target='blank' href='https://architecture.tulane.edu/sites/architecture.tulane.edu/files/styles/gallery-popup/public/timeline-entry//img_3_1979.325.5136.jpg?itok=LPezOyuo'>Source</a>)</small></div>
       <div class="card-body">
         <div class="row">
           <div class="col-12 col-md-8">
@@ -141,26 +202,26 @@
               district, erecting instead the snaking leviathan of concrete that remains to this day.</p>
             <p style="text-indent:20px">What was life like on North Claiborne during the first half of the 20th century? What kinds of Black businesses operated, and where were they? Through the use of Sanborn maps, this project is an attempt to
               situate North Claiborne's commercial corridor within its broader cultural and historical significance.</p>
-              <br>
+            <br>
             <h2 class="card-title">Sanborn Maps as Research Tools</h2>
             <p style="text-indent:20px">SANBORN MAPS have a rich history as research tools. Developed in the mid-19th century to assess risk for fire insurance, they have proved an invaluable tool for historical research, thanks to their meticulous
               detail and accuracy. The Library of Congress has digitized over 25,000 Sanborn maps in more than 3,000 US cities, all available for perusal at <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">their
                 website</a>. In this case, we are using Sanborn maps to unearth different elements of the North Claiborne corridor's commercial district. In doing so, we will also identify some methodological elements – opportunities <i>and</i>
               limitations – of doing historical geographic research with Sanborn maps.</p>
-              <br>
-              <h2 class="card-title">Instructions for Navigating the Maps</h2>
-              <p style="text-indent:20px">THE FIVE MAPS below have been lightly annotated to highlight select Black businesses and institutions that were active prior to the construction of I-10. The businesses addressed education,
-                insurance, pharmaceutical needs and more for the New Orleanian Black community. Some such businesses are still active today. While the
-                items highlighted below were not necessarily eradicated due to the construction of the overpass (e.g., Straight College was merged with New Orleans University to form Dillard U. in 1930), these annotations are meant to signify the
-                many critical community operations could be found along the North Claiborne corridor during the early and mid-twentieth century.</p><br>
-                <ul>
-                  <li><b>Double-click or use the button</b> in the top-left corners of the maps to zoom in and out (scrolling is disabled).
-                  <li><b>Click a polygon</b> to learn more information about the item it contains.
-                  <li><b>Click the 'X,'</b> or anywhere else on the map, to close a popup after opening.
-                  <li><b>See the key</b> for understanding <a target="blank" href="http://web.mit.edu/thecity/resources/abbreviations_for_sanborn_maps.pdf">Sanborn map abbreviations</a>.
-                  <li><b>See the legend</b> for interpreting <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">Sanborn map colors</a>.
-                </ul>
-                <p></p>
+            <br>
+            <h2 class="card-title">Instructions for Navigating the Maps</h2>
+            <p style="text-indent:20px">THE FIVE MAPS below have been lightly annotated to highlight select Black businesses and institutions that were active prior to the construction of I-10. The businesses addressed education,
+              insurance, pharmaceutical needs and more for the New Orleanian Black community. Some such businesses are still active today. While the
+              items highlighted below were not necessarily eradicated due to the construction of the overpass (e.g., Straight College was merged with New Orleans University to form Dillard U. in 1930), these annotations are meant to signify the
+              many critical community operations could be found along the North Claiborne corridor during the early and mid-twentieth century.</p><br>
+            <ul>
+              <li><b>Double-click or use the button</b> in the top-left corners of the maps to zoom in and out (scrolling is disabled).
+              <li><b>Click a polygon</b> to learn more information about the item it contains.
+              <li><b>Click the 'X,'</b> or anywhere else on the map, to close a popup after opening.
+              <li><b>See the key</b> for understanding <a target="blank" href="http://web.mit.edu/thecity/resources/abbreviations_for_sanborn_maps.pdf">Sanborn map abbreviations</a>.
+              <li><b>See the legend</b> for interpreting <a target="blank" href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">Sanborn map colors</a>.
+            </ul>
+            <p></p>
           </div>
           <div class="col-6 col-md-4">
             <br>
@@ -177,14 +238,14 @@
             </div>
             <br>
             <div class="card" style="width: 100%;"=>
-              <img src="https://ksr-ugc.imgix.net/assets/022/301/681/ae95e59eb9a7a5ab7e733eceb8e12eca_original.JPG?ixlib=rb-2.1.0&w=680&fit=max&v=1534880716&auto=format&frame=1&q=92&s=62690fec933ef0a1c028d2f2ccd0a502" width=100% border="3px solid #555" alt="Card image cap">
+              <img src="https://ksr-ugc.imgix.net/assets/022/301/681/ae95e59eb9a7a5ab7e733eceb8e12eca_original.JPG?ixlib=rb-2.1.0&w=680&fit=max&v=1534880716&auto=format&frame=1&q=92&s=62690fec933ef0a1c028d2f2ccd0a502" width=100% border="3px solid #555"
+                alt="Card image cap">
               <p class="card-text" style="text-align:center"><small class="text-muted">Various advertisements for North Claiborne businesses.<a target="blank" href="https://ksr-ugc.imgix.net/assets/022/301/681/ae95e59eb9a7a5ab7e733eceb8e12eca_original.JPG?ixlib=rb-2.1.0&w=680&fit=max&v=1534880716&auto=format&frame=1&q=92&s=62690fec933ef0a1c028d2f2ccd0a502">(Source)</a></small>
             </div>
           </div>
         </div>
-        <br>
-        <h1 style="text-align:center">Map Gallery</h1>
-        <!-- Map row 1 starts -->
+        <div id="map-gallery" style="text-align:center">Map Gallery</div>
+        <!-- Exhibit 1 -->
         <div class="row mt-3 bg-white text-dark">
           <div class="col-sm py-3 bg-white text-dark">
             <div class="col">
@@ -193,909 +254,904 @@
               <div id="iiif-map1"></div>
               <div class="card-body">
                 <h2 class="card-title">Exhibit 1: Vol. 1, Sheet 16 (1950)</h2>
-                <p class="card-text">The 1500 blocks of Claiborne, abutting St. Bernard Circle. Explore Circle Food Store, Beck's Restaurant, and the neutral ground of Claiborne Avenue. Learn about some conventions of Sanborn maps.</p><br>
-                <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm py-3 bg-white">
-            <div class="col">
-            </div>
-            <div class="card" style="width: 100%;">
-              <div id="iiif-map4"></div>
-              <div class="card-body">
-                <h2 class="card-title">Exhibit 2: Vol. 1, Sheet 25 (1950)</h2>
-                <p class="card-text">The lakeside blocks of North Claiborne, intersecting Esplanade. Explore the former Straight University Boarding House and Dining Hall. Learn about the cartographic practice of Sanborn map palimpsests.</p>
+                <p class="card-text">The 1500 blocks of Claiborne, abutting St. Bernard Circle. Explore Circle Food Store, Beck's Restaurant, and the neutral ground of Claiborne Avenue. Learn about some conventions of Sanborn maps.</p>
                 <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
               </div>
             </div>
           </div>
         </div>
-        <!-- Map row 1 ends, map row 2 starts -->
-        <div class="row mt-3 bg-white text-dark">
-          <div class="col-sm py-3 bg-white">
-            <div class="col">
-            </div>
-            <div class="card" style="width: 100%;">
-              <div id="iiif-map3"></div>
-              <div class="card-body">
-                <h2 class="card-title">Exhibit 3: Vol. 2, Sheet 107 (1940)</h2>
-                <p class="card-text">The 900 and 1000 blocks of North Claiborne, the boundaries of this map land in the heart of the Treme neighborhood. Explore the Charbonnet Funeral Home, the Economy Society, and a residential block of Treme. Learn about how urban
-                  renewal projects affected the Treme neighborhood in the 1960s and 1970s.</p>
-                <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+        <!-- Exhibit 2 -->
+          <div class="row mt-3 bg-white text-dark">
+            <div class="col-sm py-3 bg-white">
+              <div class="col">
+              </div>
+              <div class="card" style="width: 100%;">
+                <div id="iiif-map4"></div>
+                <div class="card-body">
+                  <h2 class="card-title">Exhibit 2: Vol. 1, Sheet 25 (1950)</h2>
+                  <p class="card-text">The lakeside blocks of North Claiborne, intersecting Esplanade. Explore the former Straight University Boarding House and Dining Hall. Learn about the cartographic practice of Sanborn map palimpsests.</p>
+                  <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-sm py-3 bg-white">
-            <div class="col">
-            </div>
-            <div class="card" style="width: 100%;">
-              <div id="iiif-map2"></div>
-              <div class="card-body">
-                <h2 class="card-title">Exhibit 4: Vol. 2, Sheet 125 (1940)</h2>
-                <p class="card-text">The lakeside blocks of North Claiborne between Orleans and St. Philip (note the map is rotated 90° counterclockwise). Explore People's Benevolent Life Insurance and see how the space looks today.</p><br>
-                <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
-              </div>
+          <!-- Exhibit 3 -->
+          <div class="row mt-3 bg-white text-dark">
+        <div class="col-sm py-3 bg-white">
+          <div class="col">
+          </div>
+          <div class="card" style="width: 100%;">
+            <div id="iiif-map3"></div>
+            <div class="card-body">
+              <h2 class="card-title">Exhibit 3: Vol. 2, Sheet 107 (1940)</h2>
+              <p class="card-text">The 900 and 1000 blocks of North Claiborne, the boundaries of this map land in the heart of the Treme neighborhood. Explore the Charbonnet Funeral Home, the Economy Society, and a residential block of Treme.
+                Learn about how urban
+                renewal projects affected the Treme neighborhood in the 1960s and 1970s.</p>
+              <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
             </div>
           </div>
-        </div>
-        <!-- Map 2 row ends, Map row 3 starts -->
-        <div class="row mt-3 bg-white text-dark">
-          <div class="col-sm py-3 bg-white">
-            <div class="col">
-            </div>
-            <div class="card" style="width: 100%;">
-              <div id="iiif-map5"></div>
-              <div class="card-body">
-                <h2 class="card-title">Exhibit 5: Vol. 2, Sheet 106 (1940)</h2>
-                <p class="card-text">The intersection of North Claiborne and Orleans Avenues. Explore the Treme Market, LaBranche's Pharmacy, and the Treme Market Branch Bank.</p>
-                <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-sm py-3 bg-white">
-            <div class="col">
-            </div>
-            <div class="card" style="width: 100%;">
-              <div id="iiif-map6"></div>
-              <div class="card-body">
-                <h2 class="card-title">Exhibit 6: Vol. 2, Sheet 125 (1940)</h2>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
-</div>
-      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-      <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v3.0.0/leaflet-iiif.js"></script>
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <!-- make sure to import Leaflet-IIIF *after* the main Leaflet package -->
-      <script>
-        // Add maps
+      <!-- Exhibit 4 -->
+      <div class="row mt-3 bg-white text-dark">
+        <div class="col-sm py-3 bg-white">
+          <div class="col">
+          </div>
+          <div class="card" style="width: 100%;">
+            <div id="iiif-map2"></div>
+            <div class="card-body">
+              <h2 class="card-title">Exhibit 4: Vol. 2, Sheet 125 (1940)</h2>
+              <p class="card-text">The lakeside blocks of North Claiborne between Orleans and St. Philip (note the map is rotated 90° counterclockwise). Explore People's Benevolent Life Insurance and see how the space looks today.</p><br>
+              <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Exhibit 5 -->
+      <div class="row mt-3 bg-white text-dark">
+        <div class="col-sm py-3 bg-white">
+          <div class="col">
+          </div>
+          <div class="card" style="width: 100%;">
+            <div id="iiif-map5"></div>
+            <div class="card-body">
+              <h2 class="card-title">Exhibit 5: Vol. 2, Sheet 106 (1940)</h2>
+              <p class="card-text">The intersection of North Claiborne and Orleans Avenues. Explore the Treme Market, LaBranche's Pharmacy, and the Treme Market Branch Bank.</p>
+              <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17&r=-1.456,0,3.911,1.439,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+  <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v3.0.0/leaflet-iiif.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- make sure to import Leaflet-IIIF *after* the main Leaflet package -->
+  <script>
+    // Add maps
 
-        var maxBounds = [
-          [189.1875, -249],
-          [207.1875, 641],
-          [-682.8125, 611],
-          [-680.8125, -299]
-        ];
+    var maxBounds = [
+      [189.1875, -249],
+      [207.1875, 641],
+      [-682.8125, 611],
+      [-680.8125, -299]
+    ];
 
-        var map1 = L.map('iiif-map1', {
-            center: [-201.40625, 180.5],
-            crs: L.CRS.Simple,
-            zoom: 0,
-            zoomSnap: 0,
-            zoomDelta: 1,
-            scrollWheelZoom: false
-          })
-          .setMaxBounds(maxBounds)
-          .setView([-238.8125, 169], 0.1);
+    var map1 = L.map('iiif-map1', {
+        center: [-201.40625, 180.5],
+        crs: L.CRS.Simple,
+        zoom: 0,
+        zoomSnap: 0,
+        zoomDelta: 1,
+        scrollWheelZoom: false
+      })
+      .setMaxBounds(maxBounds)
+      .setView([-238.8125, 169], 0.1);
 
-        var vol1sheet16_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0016/info.json').addTo(map1);
+    var vol1sheet16_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0016/info.json').addTo(map1);
 
-        var map2 = L.map('iiif-map2', {
-            center: [0, 0],
-            crs: L.CRS.Simple,
-            zoom: 0,
-            zoomSnap: 0,
-            zoomdelta: 1,
-            scrollWheelZoom: false
-          })
-          .setMaxBounds(maxBounds)
-          .setView([-238.8125, 169], 0.2);
+    var map2 = L.map('iiif-map2', {
+        center: [0, 0],
+        crs: L.CRS.Simple,
+        zoom: 0,
+        zoomSnap: 0,
+        zoomdelta: 1,
+        scrollWheelZoom: false
+      })
+      .setMaxBounds(maxBounds)
+      .setView([-238.8125, 169], 0.2);
 
-        var vol2sheet25_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0125/info.json').addTo(map2);
+    var vol2sheet25_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0125/info.json').addTo(map2);
 
-        var map3 = L.map('iiif-map3', {
-            center: [0, 0],
-            crs: L.CRS.Simple,
-            zoom: 0,
-            zoomSnap: 0,
-            zoomdelta: 1,
-            scrollWheelZoom: false
-          })
-          .setMaxBounds(maxBounds)
-          .setView([-238.8125, 169], 0.2);
+    var map3 = L.map('iiif-map3', {
+        center: [0, 0],
+        crs: L.CRS.Simple,
+        zoom: 0,
+        zoomSnap: 0,
+        zoomdelta: 1,
+        scrollWheelZoom: false
+      })
+      .setMaxBounds(maxBounds)
+      .setView([-238.8125, 169], 0.2);
 
-        var vol2sheet07_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0107/info.json').addTo(map3);
+    var vol2sheet07_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0107/info.json').addTo(map3);
 
-        var map4 = L.map('iiif-map4', {
-            center: [0, 0],
-            crs: L.CRS.Simple,
-            zoom: 0,
-            zoomSnap: 0,
-            zoomdelta: 1,
-            scrollWheelZoom: false
-          })
-          .setMaxBounds(maxBounds)
-          .setView([-238.8125, 169], 0.2);
+    var map4 = L.map('iiif-map4', {
+        center: [0, 0],
+        crs: L.CRS.Simple,
+        zoom: 0,
+        zoomSnap: 0,
+        zoomdelta: 1,
+        scrollWheelZoom: false
+      })
+      .setMaxBounds(maxBounds)
+      .setView([-238.8125, 169], 0.2);
 
-        var vol1sheet25_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map4);
+    var vol1sheet25_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map4);
 
-        var map5 = L.map('iiif-map5', {
-            center: [0, 0],
-            crs: L.CRS.Simple,
-            zoom: 0,
-            zoomSnap: 0,
-            zoomdelta: 1,
-            scrollWheelZoom: false
-          })
-          .setMaxBounds(maxBounds)
-          .setView([-238.8125, 169], 0.2);
+    var map5 = L.map('iiif-map5', {
+        center: [0, 0],
+        crs: L.CRS.Simple,
+        zoom: 0,
+        zoomSnap: 0,
+        zoomdelta: 1,
+        scrollWheelZoom: false
+      })
+      .setMaxBounds(maxBounds)
+      .setView([-238.8125, 169], 0.2);
 
-        var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0106/info.json').addTo(map5);
+    var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376194002:03376_02_1940-0106/info.json').addTo(map5);
 
-        // var map6 = L.map('iiif-map6', {
-        //     center: [0, 0],
-        //     crs: L.CRS.Simple,
-        //     zoom: 0,
-        //     zoomSnap: 0,
-        //     zoomdelta: 1,
-        //     scrollWheelZoom: false
-        //   })
-        //   .setMaxBounds(maxBounds)
-        //   .setView([-238.8125, 169], 0.2);
-        //
-        // var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map6);
+    // var map6 = L.map('iiif-map6', {
+    //     center: [0, 0],
+    //     crs: L.CRS.Simple,
+    //     zoom: 0,
+    //     zoomSnap: 0,
+    //     zoomdelta: 1,
+    //     scrollWheelZoom: false
+    //   })
+    //   .setMaxBounds(maxBounds)
+    //   .setView([-238.8125, 169], 0.2);
+    //
+    // var vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195001:03376_01_1950-0025/info.json').addTo(map6);
 
-        // Get lat longs
+    // Get lat longs
 
-        // map1.on('click', function(e) {
-        //   var marker = new L.marker(e.latlng).addTo(map1);
-        //   var latlng = map1.mouseEventToLatLng(e.originalEvent);
-        //   console.log(latlng.lat + ', ' + latlng.lng);
-        // });
-        //
-        // map2.on('click', function(e) {
-        //   var marker = new L.marker(e.latlng).addTo(map2);
-        //   var latlng = map2.mouseEventToLatLng(e.originalEvent);
-        //   console.log(latlng.lat + ', ' + latlng.lng);
-        // });
-        //
-        // map3.on('click', function(e) {
-        //   var marker = new L.marker(e.latlng).addTo(map5);
-        //   var latlng = map3.mouseEventToLatLng(e.originalEvent);
-        //   console.log(latlng.lat + ', ' + latlng.lng);
-        // });
-        //
-        // map4.on('click', function(e) {
-        //   var marker = new L.marker(e.latlng).addTo(map4);
-        //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
-        //   console.log(latlng.lat + ', ' + latlng.lng);
-        // });
-        //
-        // map5.on('click', function(e) {
-        //   var marker = new L.marker(e.latlng).addTo(map5);
-        //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
-        //   console.log(latlng.lat + ', ' + latlng.lng);
-        // });
-        //
-        // map6.on('click', function(e) {
-        //   var marker = new L.marker(e.latlng).addTo(map6);
-        //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
-        //   console.log(latlng.lat + ', ' + latlng.lng);
-        // });
+    // map1.on('click', function(e) {
+    //   var marker = new L.marker(e.latlng).addTo(map1);
+    //   var latlng = map1.mouseEventToLatLng(e.originalEvent);
+    //   console.log(latlng.lat + ', ' + latlng.lng);
+    // });
+    //
+    // map2.on('click', function(e) {
+    //   var marker = new L.marker(e.latlng).addTo(map2);
+    //   var latlng = map2.mouseEventToLatLng(e.originalEvent);
+    //   console.log(latlng.lat + ', ' + latlng.lng);
+    // });
+    //
+    // map3.on('click', function(e) {
+    //   var marker = new L.marker(e.latlng).addTo(map5);
+    //   var latlng = map3.mouseEventToLatLng(e.originalEvent);
+    //   console.log(latlng.lat + ', ' + latlng.lng);
+    // });
+    //
+    // map4.on('click', function(e) {
+    //   var marker = new L.marker(e.latlng).addTo(map4);
+    //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
+    //   console.log(latlng.lat + ', ' + latlng.lng);
+    // });
+    //
+    // map5.on('click', function(e) {
+    //   var marker = new L.marker(e.latlng).addTo(map5);
+    //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
+    //   console.log(latlng.lat + ', ' + latlng.lng);
+    // });
+    //
+    // map6.on('click', function(e) {
+    //   var marker = new L.marker(e.latlng).addTo(map6);
+    //   var latlng = map4.mouseEventToLatLng(e.originalEvent);
+    //   console.log(latlng.lat + ', ' + latlng.lng);
+    // });
 
-        // MAP 1 ELEMENTS
+    // MAP 1 ELEMENTS
 
-        // Set coordinates for Map 1 polygons
+    // Set coordinates for Map 1 polygons
 
-        var becksRest_coord = [
-          [-57.55078125, 114.0625],
-          [-57.67578125, 124.6875],
-          [-93.30078125, 125.4375],
-          [-93.30078125, 113.9375]
-        ]
+    var becksRest_coord = [
+      [-57.55078125, 114.0625],
+      [-57.67578125, 124.6875],
+      [-93.30078125, 125.4375],
+      [-93.30078125, 113.9375]
+    ]
 
-        var circleGrocery_coord = [
-          [-51.05078125, 251.8125],
-          [-49.92578125, 300.3125],
-          [-62.80078125, 303.1875],
-          [-76.42578125, 303.3125],
-          [-88.17578125, 300.6875],
-          [-92.80078125, 299.1875],
-          [-92.92578125, 288.9375],
-          [-101.05078125, 288.6875],
-          [-101.30078125, 254.1875],
-          [-88.05078125, 253.9375],
-          [-88.17578125, 252.5625]
-        ];
+    var circleGrocery_coord = [
+      [-51.05078125, 251.8125],
+      [-49.92578125, 300.3125],
+      [-62.80078125, 303.1875],
+      [-76.42578125, 303.3125],
+      [-88.17578125, 300.6875],
+      [-92.80078125, 299.1875],
+      [-92.92578125, 288.9375],
+      [-101.05078125, 288.6875],
+      [-101.30078125, 254.1875],
+      [-88.05078125, 253.9375],
+      [-88.17578125, 252.5625]
+    ];
 
-        var neutralGround_coord = [
-          [-11.3515625, 56.875],
-          [-9.6015625, 174.375],
-          [-40.1015625, 174.375],
-          [-41.3515625, 56.875]
-        ];
+    var neutralGround_coord = [
+      [-11.3515625, 56.875],
+      [-9.6015625, 174.375],
+      [-40.1015625, 174.375],
+      [-41.3515625, 56.875]
+    ];
 
-        var northArrow1_coord = [
-          [-226.1015625, 257.625],
-          [-182.1015625, 314.625],
-          [-203.8515625, 339.625],
-          [-252.3515625, 280.375]
-        ];
+    var northArrow1_coord = [
+      [-226.1015625, 257.625],
+      [-182.1015625, 314.625],
+      [-203.8515625, 339.625],
+      [-252.3515625, 280.375]
+    ];
 
-        // Create Circle food store popup options and polygon
+    // Create Circle food store popup options and polygon
 
-        var circleFoodPopup = "<h2><b>Circle Food Store</b></h2>" + "<h3>1518 St. Bernard</h3>" +
-          "<p>This famous grocery at St. Bernard Circle was a hub of activity among locals. As Dodie Smith-Simmons recalls, “Anything you needed you could find at the Circle Food Store. Vendors would come in and sell their produce, their live chickens and turtles and whatever.”" +
-          "<p>" +
-          "<img src='https://static.wixstatic.com/media/8ea545_0920b120b8544dccb54062df232b2e14~mv2.jpg/v1/fill/w_679,h_530,al_c,q_90,usm_0.66_1.00_0.01/8ea545_0920b120b8544dccb54062df232b2e14~mv2.webp' alt='maptime logo gif' width='200px'/>";
+    var circleFoodPopup = "<h2><b>Circle Food Store</b></h2>" + "<h3>1518 St. Bernard</h3>" +
+      "<p>This famous grocery at St. Bernard Circle was a hub of activity among locals. As Dodie Smith-Simmons recalls, “Anything you needed you could find at the Circle Food Store. Vendors would come in and sell their produce, their live chickens and turtles and whatever.”" +
+      "<p>" +
+      "<img src='https://static.wixstatic.com/media/8ea545_0920b120b8544dccb54062df232b2e14~mv2.jpg/v1/fill/w_679,h_530,al_c,q_90,usm_0.66_1.00_0.01/8ea545_0920b120b8544dccb54062df232b2e14~mv2.webp' alt='maptime logo gif' width='200px'/>";
 
-        var circleFoodPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var circleFoodPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var circleGrocery = L.polygon(circleGrocery_coord, {
+    var circleGrocery = L.polygon(circleGrocery_coord, {
+      color: '#2A689A'
+    }).addTo(map1);
+    circleGrocery.on('click', function() {
+      map1.fitBounds(circleGrocery.getBounds());
+    });
+    circleGrocery.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      circleGrocery.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map1);
-        circleGrocery.on('click', function() {
-          map1.fitBounds(circleGrocery.getBounds());
-        });
-        circleGrocery.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          circleGrocery.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        circleGrocery.bindPopup(circleFoodPopup, circleFoodPopup_options);
-        circleGrocery.on('click', function(e) {
-          this.openPopup();
-        });
-        circleGrocery.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    circleGrocery.bindPopup(circleFoodPopup, circleFoodPopup_options);
+    circleGrocery.on('click', function(e) {
+      this.openPopup();
+    });
+    circleGrocery.on('', function(e) {
+      this.closePopup();
+    });
 
-        // Create neutral ground popup options and polygon
+    // Create neutral ground popup options and polygon
 
-        var neutralGroundPopup = "<h2><b>Neutral Ground</b></h2>" + "<h3>All along North Claiborne Avenue</h3>" +
-          "<p>As " + "<a target='blank' href='https://64parishes.org/neutral-ground'>Richard Campanella explains</a>" +
-          ", the term 'neutral ground' derives from the unique colonial politics of New Orleans in the early 19th century. The neutral ground of North Claiborne housed the longest continuous row of live oak trees in the country, and constituted a space for community gatherings, even large enough for children to play baseball." +
-          "<p>" +
-          "<img src='https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/a/cc/accd2865-12eb-5fc2-b37f-cce01de24b1d/5d13c56c7278d.image.jpg?crop=286%2C286%2C47%2C0&resize=1200%2C1200&order=crop%2Cresize' alt='CLaiborne live oaks' width='200px'/>";
+    var neutralGroundPopup = "<h2><b>Neutral Ground</b></h2>" + "<h3>All along North Claiborne Avenue</h3>" +
+      "<p>As " + "<a target='blank' href='https://64parishes.org/neutral-ground'>Richard Campanella explains</a>" +
+      ", the term 'neutral ground' derives from the unique colonial politics of New Orleans in the early 19th century. The neutral ground of North Claiborne housed the longest continuous row of live oak trees in the country, and constituted a space for community gatherings, even large enough for children to play baseball." +
+      "<p>" +
+      "<img src='https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/a/cc/accd2865-12eb-5fc2-b37f-cce01de24b1d/5d13c56c7278d.image.jpg?crop=286%2C286%2C47%2C0&resize=1200%2C1200&order=crop%2Cresize' alt='CLaiborne live oaks' width='200px'/>";
 
-        var neutralGroundPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var neutralGroundPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var neutralGround = L.polygon(neutralGround_coord, {
+    var neutralGround = L.polygon(neutralGround_coord, {
+      color: '#2A689A'
+    }).addTo(map1);
+    neutralGround.on('click', function() {
+      map1.fitBounds(neutralGround.getBounds());
+    });
+    neutralGround.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      neutralGround.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map1);
-        neutralGround.on('click', function() {
-          map1.fitBounds(neutralGround.getBounds());
-        });
-        neutralGround.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          neutralGround.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        neutralGround.bindPopup(neutralGroundPopup, neutralGroundPopup_options);
-        neutralGround.on('click', function(e) {
-          this.openPopup();
-        });
-        neutralGround.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    neutralGround.bindPopup(neutralGroundPopup, neutralGroundPopup_options);
+    neutralGround.on('click', function(e) {
+      this.openPopup();
+    });
+    neutralGround.on('', function(e) {
+      this.closePopup();
+    });
 
-        // Create Beck's restaurant popup
+    // Create Beck's restaurant popup
 
-        var becksRestPopup = "<h2><b>Beck's Restaurant</b></h2>" + "<h3>1520 North Claiborne</h3>" +
-          "<p>The " + "<a target='blank' href='https://digitalcollections.nypl.org/items/51514e90-856e-0132-01a0-58d385a7b928/book#page/33/mode/2up'>Negro Motorist Green Book </a>" +
-          "was a vital travel resource for Black Americans on the road. Published between 1936 to 1966 by Victor Hugo Green, the Green Book provided a variety of friendly inns, restaurants, drugstores, and more that Black folks could safely patronize during their travels. Beck's may refer to The Joy Ship Restaurant, owned by Matthew P. Beck, Sr., which <a target='blank' href='https://www.xlibris.com/BookStore/BookDetails/737427-sitting-on-the-galerie-and-playing-on-the-banquette'>Roland Davidson</a> describes as a 'popular restaurant... on North Claiborne Avenue in the Treme.' See the Green Book entry from 1951 below:" +
-          "<p>" +
-          "<img src='images/becks-restaurant.png' alt='Beck's Restaurant' width='300px'/>";
+    var becksRestPopup = "<h2><b>Beck's Restaurant</b></h2>" + "<h3>1520 North Claiborne</h3>" +
+      "<p>The " + "<a target='blank' href='https://digitalcollections.nypl.org/items/51514e90-856e-0132-01a0-58d385a7b928/book#page/33/mode/2up'>Negro Motorist Green Book </a>" +
+      "was a vital travel resource for Black Americans on the road. Published between 1936 to 1966 by Victor Hugo Green, the Green Book provided a variety of friendly inns, restaurants, drugstores, and more that Black folks could safely patronize during their travels. Beck's may refer to The Joy Ship Restaurant, owned by Matthew P. Beck, Sr., which <a target='blank' href='https://www.xlibris.com/BookStore/BookDetails/737427-sitting-on-the-galerie-and-playing-on-the-banquette'>Roland Davidson</a> describes as a 'popular restaurant... on North Claiborne Avenue in the Treme.' See the Green Book entry from 1951 below:" +
+      "<p>" +
+      "<img src='images/becks-restaurant.png' alt='Beck's Restaurant' width='300px'/>";
 
-        var becksRestPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var becksRestPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var becksRest = L.polygon(becksRest_coord, {
+    var becksRest = L.polygon(becksRest_coord, {
+      color: '#2A689A'
+    }).addTo(map1);
+    becksRest.on('click', function() {
+      map1.fitBounds(becksRest.getBounds());
+    });
+    becksRest.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      becksRest.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map1);
-        becksRest.on('click', function() {
-          map1.fitBounds(becksRest.getBounds());
-        });
-        becksRest.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          becksRest.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        becksRest.bindPopup(becksRestPopup, becksRestPopup_options);
-        neutralGround.on('click', function(e) {
-          this.openPopup();
-        });
-        becksRest.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    becksRest.bindPopup(becksRestPopup, becksRestPopup_options);
+    neutralGround.on('click', function(e) {
+      this.openPopup();
+    });
+    becksRest.on('', function(e) {
+      this.closePopup();
+    });
 
-        // Create north arrow popup
+    // Create north arrow popup
 
-        var northArrowPopup = "<h2><b>North Arrow</b></h2>" + "<h3>Sanborn Maps</h3>" +
-          "<p>Note the direction of the North Arrow on this map. Sanborn maps are not all oriented in the same direction. As you interpret the maps, be advised that some Sanborns are rotated in a different direction (e.g., Exhibits 3 and 4).</p>";
+    var northArrowPopup = "<h2><b>North Arrow</b></h2>" + "<h3>Sanborn Maps</h3>" +
+      "<p>Note the direction of the North Arrow on this map. Sanborn maps are not all oriented in the same direction. As you interpret the maps, be advised that some Sanborns are rotated in a different direction (e.g., Exhibits 3 and 4).</p>";
 
-        var northArrowPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var northArrowPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var northArrow1 = L.polygon(northArrow1_coord, {
+    var northArrow1 = L.polygon(northArrow1_coord, {
+      color: '#2A689A'
+    }).addTo(map1);
+    northArrow1.on('click', function() {
+      map1.fitBounds(northArrow1.getBounds());
+    });
+    northArrow1.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      northArrow1.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map1);
-        northArrow1.on('click', function() {
-          map1.fitBounds(northArrow1.getBounds());
-        });
-        northArrow1.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          northArrow1.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        northArrow1.bindPopup(northArrowPopup, northArrowPopup_options);
-        northArrow1.on('click', function(e) {
-          this.openPopup();
-        });
-        northArrow1.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    northArrow1.bindPopup(northArrowPopup, northArrowPopup_options);
+    northArrow1.on('click', function(e) {
+      this.openPopup();
+    });
+    northArrow1.on('', function(e) {
+      this.closePopup();
+    });
 
-        // MAP 2 ELEMENTS
+    // MAP 2 ELEMENTS
 
-        // Set coordinates for map 2 elements
+    // Set coordinates for map 2 elements
 
-        var peoplesInsurance_coords = [
-          [-193.1015625, 231.875],
-          [-193.3515625, 257.625],
-          [-203.8515625, 257.875],
-          [-203.6015625, 231.875],
-        ];
+    var peoplesInsurance_coords = [
+      [-193.1015625, 231.875],
+      [-193.3515625, 257.625],
+      [-203.8515625, 257.875],
+      [-203.6015625, 231.875],
+    ];
 
-        // create People's insurance popup
+    // create People's insurance popup
 
-        var peoplesInsurancePopup = "<h2><b>People's Benevolent Life Insurance</b></h2>" + "<h3>901 North Claiborne</h3>" +
-          "<p>In 1909, this building was home to the People's Benevolent (later the People's Industrial) Life Insurance, owned and founded by Walter Cohen and others. People's Benevolent was the second Black industrial insurance company in the state of Louisiana. Cohen has been described as a 'political giant... one of the most influential Creole Republicans in the state of Louisiana' (Davidson 2011, 104).</p><p>Regarding insurance, Michael Crutcher has written that 'the significance of the insurance industry as a source for race leadership can scarcely be overstated' (2010, 56). This was true both <i>formally</i> through the insurance industry, and <i>informally</i> through <a target='blank' href='https://www.neworleans.com/things-to-do/music/history-and-traditions/social-aid-and-pleasure-clubs/mutual'>mutual aid and pleasure clubs</a> that would come to be associated with the New Orleanian traditions of second line parading.</p><p>See the <a target='blank' href='https://artsandculture.google.com/asset/the-weekly-sentinel-vol-1-no-32-the-weekly-sentinel/AgGx_FFbvJeBXg'>Amistad Research Center</a> for a historic advert.";
+    var peoplesInsurancePopup = "<h2><b>People's Benevolent Life Insurance</b></h2>" + "<h3>901 North Claiborne</h3>" +
+      "<p>In 1909, this building was home to the People's Benevolent (later the People's Industrial) Life Insurance, owned and founded by Walter Cohen and others. People's Benevolent was the second Black industrial insurance company in the state of Louisiana. Cohen has been described as a 'political giant... one of the most influential Creole Republicans in the state of Louisiana' (Davidson 2011, 104).</p><p>Regarding insurance, Michael Crutcher has written that 'the significance of the insurance industry as a source for race leadership can scarcely be overstated' (2010, 56). This was true both <i>formally</i> through the insurance industry, and <i>informally</i> through <a target='blank' href='https://www.neworleans.com/things-to-do/music/history-and-traditions/social-aid-and-pleasure-clubs/mutual'>mutual aid and pleasure clubs</a> that would come to be associated with the New Orleanian traditions of second line parading.</p><p>See the <a target='blank' href='https://artsandculture.google.com/asset/the-weekly-sentinel-vol-1-no-32-the-weekly-sentinel/AgGx_FFbvJeBXg'>Amistad Research Center</a> for a historic advert.";
 
-        var peoplesInsurancePopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var peoplesInsurancePopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var peoplesInsurance = L.polygon(peoplesInsurance_coords, {
+    var peoplesInsurance = L.polygon(peoplesInsurance_coords, {
+      color: '#2A689A'
+    }).addTo(map2);
+    peoplesInsurance.on('click', function() {
+      map2.fitBounds(peoplesInsurance.getBounds());
+    });
+    peoplesInsurance.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      peoplesInsurance.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map2);
-        peoplesInsurance.on('click', function() {
-          map2.fitBounds(peoplesInsurance.getBounds());
-        });
-        peoplesInsurance.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          peoplesInsurance.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        peoplesInsurance.bindPopup(peoplesInsurancePopup, peoplesInsurancePopup_options);
-        peoplesInsurance.on('click', function(e) {
-          this.openPopup();
-        });
-        peoplesInsurance.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    peoplesInsurance.bindPopup(peoplesInsurancePopup, peoplesInsurancePopup_options);
+    peoplesInsurance.on('click', function(e) {
+      this.openPopup();
+    });
+    peoplesInsurance.on('', function(e) {
+      this.closePopup();
+    });
 
-        // var club_coords = [
-        //   [-77.44429687499999, 221.65875],
-        //   [-77.69929687499999, 256.59375],
-        //   [-87.26179687499999, 257.10375],
-        //   [-87.26179687499999, 221.53124999999997]
-        // ]
-        //
-        // var clubPopup = "<h2><b>Clubs along North Claiborne</b></h2>" + "<h3>941 North Claiborne</h3>" +
-        //   "<p></p>";
-        //
-        // var clubPopup_options = {
-        //   'maxWidth': '300',
-        //   'className': 'custom',
-        //   'keepInView': 'True'
-        // }
-        //
-        // var club = L.polygon(club_coords, {
-        //   color: '#2A689A'
-        // }).addTo(map2);
-        // club.on('click', function() {
-        //   map2.fitBounds(club.getBounds());
-        // });
-        // club.on('mouseover', function() {
-        //   this.setStyle({
-        //     color: '#add8e6' //or whatever style you wish to use;
-        //   });
-        //   club.on('mouseout', function() {
-        //     this.setStyle({
-        //       color: '#2A689A'
-        //     })
-        //   });
-        // });
-        // club.bindPopup(clubPopup, clubPopup_options);
-        // club.on('click', function(e) {
-        //   this.openPopup();
-        // });
-        // club.on('', function(e) {
-        //   this.closePopup();
-        // });
+    // var club_coords = [
+    //   [-77.44429687499999, 221.65875],
+    //   [-77.69929687499999, 256.59375],
+    //   [-87.26179687499999, 257.10375],
+    //   [-87.26179687499999, 221.53124999999997]
+    // ]
+    //
+    // var clubPopup = "<h2><b>Clubs along North Claiborne</b></h2>" + "<h3>941 North Claiborne</h3>" +
+    //   "<p></p>";
+    //
+    // var clubPopup_options = {
+    //   'maxWidth': '300',
+    //   'className': 'custom',
+    //   'keepInView': 'True'
+    // }
+    //
+    // var club = L.polygon(club_coords, {
+    //   color: '#2A689A'
+    // }).addTo(map2);
+    // club.on('click', function() {
+    //   map2.fitBounds(club.getBounds());
+    // });
+    // club.on('mouseover', function() {
+    //   this.setStyle({
+    //     color: '#add8e6' //or whatever style you wish to use;
+    //   });
+    //   club.on('mouseout', function() {
+    //     this.setStyle({
+    //       color: '#2A689A'
+    //     })
+    //   });
+    // });
+    // club.bindPopup(clubPopup, clubPopup_options);
+    // club.on('click', function(e) {
+    //   this.openPopup();
+    // });
+    // club.on('', function(e) {
+    //   this.closePopup();
+    // });
 
-        var insuranceGone_coords = [
-          [-166.694296875, 259.27125],
-          [-166.311796875, 271.00124999999997],
-          [-176.63929687499999, 271.38374999999996],
-          [-175.874296875, 259.01624999999996]
-        ]
+    var insuranceGone_coords = [
+      [-166.694296875, 259.27125],
+      [-166.311796875, 271.00124999999997],
+      [-176.63929687499999, 271.38374999999996],
+      [-175.874296875, 259.01624999999996]
+    ]
 
-        var insuranceGonePopup = "<h2><b>People's Insurance Today</b></h2>" + "<h3>901 North Claiborne</h3>" +
-          "<p>The old building of People's Insurance was reclaimed for the construction of I-10:</p>" +
-          "<img src='images/gmap.jpg' alt='Google map of 901 N Claiborne' width='200px'/>" +
-          "<img src='images/901-claiborne.jpg' alt='Street view' width='200px'/>";
+    var insuranceGonePopup = "<h2><b>People's Insurance Today</b></h2>" + "<h3>901 North Claiborne</h3>" +
+      "<p>The old building of People's Insurance was reclaimed for the construction of I-10:</p>" +
+      "<img src='images/gmap.jpg' alt='Google map of 901 N Claiborne' width='200px'/>" +
+      "<img src='images/901-claiborne.jpg' alt='Street view' width='200px'/>";
 
-        var insuranceGonePopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var insuranceGonePopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var insuranceGone = L.polygon(insuranceGone_coords, {
+    var insuranceGone = L.polygon(insuranceGone_coords, {
+      color: '#2A689A'
+    }).addTo(map2);
+    insuranceGone.on('click', function() {
+      map2.fitBounds(insuranceGone.getBounds());
+    });
+    insuranceGone.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      insuranceGone.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map2);
-        insuranceGone.on('click', function() {
-          map2.fitBounds(insuranceGone.getBounds());
-        });
-        insuranceGone.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          insuranceGone.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        insuranceGone.bindPopup(insuranceGonePopup, insuranceGonePopup_options);
-        insuranceGone.on('click', function(e) {
-          this.openPopup();
-        });
-        insuranceGone.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    insuranceGone.bindPopup(insuranceGonePopup, insuranceGonePopup_options);
+    insuranceGone.on('click', function(e) {
+      this.openPopup();
+    });
+    insuranceGone.on('', function(e) {
+      this.closePopup();
+    });
 
-        // Map 3 elements
+    // Map 3 elements
 
-        var tremeCommCenter_coords = [
-          [-347.2576279527559, 40.23228346456693],
-          [-348.21825787401576, 163.05905511811025],
-          [-444.32849409448824, 160.4448818897638],
-          [-443.32849409448824, 39.53937007874016]
-        ]
+    var tremeCommCenter_coords = [
+      [-347.2576279527559, 40.23228346456693],
+      [-348.21825787401576, 163.05905511811025],
+      [-444.32849409448824, 160.4448818897638],
+      [-443.32849409448824, 39.53937007874016]
+    ]
 
-        var tremeCommCenterPopup = "<h2><b>A Block of the Treme</b></h2>" + "<h3>Bounded by N. Villere, St. Philip, Marais, and Dumaine</h3>" +
-          "<p>At the time of this Sanborn map survey, this residential block of Treme was home to dozens of families. The buildings are overwhelmingly labeled 'D' for 'Dwelling.' Inspecting the map reveals that many of the structures are cut through with a dashed line, indicative of the <a target='blank' href='https://prcno.org/the-geography-of-the-shotgun-house/'>double shotgun house architecture</a> that is distinctive of New Orleans.</p>" +
-          "<p>Today, this block of Treme is entirely occupied by the Treme Recreation Community Center. The Community Center's construction was part of a broader regime of urban renewal projects inflicted on Treme in the 1960s and '70s. Following the federally funded construction of I-10, Treme was targeted for two significant public-private projects: Louis Armstrong Park and Mahalia Jackson Theater. Facing near categorical opposition from the community at the time, these projects together displaced hundreds of Treme residents. For more information, see Chapter 5 of Michael Crutcher's book, <i><a target='blank' href='https://ugapress.org/book/9780820335957/treme/'>Treme</a></i>.";
+    var tremeCommCenterPopup = "<h2><b>A Block of the Treme</b></h2>" + "<h3>Bounded by N. Villere, St. Philip, Marais, and Dumaine</h3>" +
+      "<p>At the time of this Sanborn map survey, this residential block of Treme was home to dozens of families. The buildings are overwhelmingly labeled 'D' for 'Dwelling.' Inspecting the map reveals that many of the structures are cut through with a dashed line, indicative of the <a target='blank' href='https://prcno.org/the-geography-of-the-shotgun-house/'>double shotgun house architecture</a> that is distinctive of New Orleans.</p>" +
+      "<p>Today, this block of Treme is entirely occupied by the Treme Recreation Community Center. The Community Center's construction was part of a broader regime of urban renewal projects inflicted on Treme in the 1960s and '70s. Following the federally funded construction of I-10, Treme was targeted for two significant public-private projects: Louis Armstrong Park and Mahalia Jackson Theater. Facing near categorical opposition from the community at the time, these projects together displaced hundreds of Treme residents. For more information, see Chapter 5 of Michael Crutcher's book, <i><a target='blank' href='https://ugapress.org/book/9780820335957/treme/'>Treme</a></i>.";
 
-        var tremeCommCenterPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var tremeCommCenterPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var tremeCommCenter = L.polygon(tremeCommCenter_coords, {
+    var tremeCommCenter = L.polygon(tremeCommCenter_coords, {
+      color: '#2A689A'
+    }).addTo(map3);
+    tremeCommCenter.on('click', function() {
+      map3.fitBounds(tremeCommCenter.getBounds());
+    });
+    tremeCommCenter.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      tremeCommCenter.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map3);
-        tremeCommCenter.on('click', function() {
-          map3.fitBounds(tremeCommCenter.getBounds());
-        });
-        tremeCommCenter.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          tremeCommCenter.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        tremeCommCenter.bindPopup(tremeCommCenterPopup, tremeCommCenterPopup_options);
-        tremeCommCenter.on('click', function(e) {
-          this.openPopup();
-        });
-        tremeCommCenter.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    tremeCommCenter.bindPopup(tremeCommCenterPopup, tremeCommCenterPopup_options);
+    tremeCommCenter.on('click', function(e) {
+      this.openPopup();
+    });
+    tremeCommCenter.on('', function(e) {
+      this.closePopup();
+    });
 
-        var funeralHome_coords = [
-          [-167.42578125, 186.4375],
-          [-167.67578125, 227.8125],
-          [-178.92578125, 227.8125],
-          [-178.92578125, 186.3125]
-        ];
+    var funeralHome_coords = [
+      [-167.42578125, 186.4375],
+      [-167.67578125, 227.8125],
+      [-178.92578125, 227.8125],
+      [-178.92578125, 186.3125]
+    ];
 
-        var funeralHomePopup = "<h2><b>Charbonnet Funeral Home</b></h2>" + "<h3>1615 St. Philip</h3>" +
-          "<p>This building, labeled 'UNDRTKR' on the map, represents the Charbonnet Funeral Home. This funeral home, founded in 1883, '<a target='blank' href='https://acloserwalknola.com/places/charbonnet-labat-glapion-funeral-home/#:~:text=Founded%20in%201883%20by%20members,remains%20as%20vital%20as%20ever'>has been a pillar of the Treme neighborhood for generations</a>' and remains an operational business. During the 1960s, the Charbonnet family were vocal advocates against the construction of the I-10 overpass.</p>" +
-          "<img src='images/tambourne-and-fan-funeral-1977.jpg' alt='Jazz funeral' width='300px'/>";
+    var funeralHomePopup = "<h2><b>Charbonnet Funeral Home</b></h2>" + "<h3>1615 St. Philip</h3>" +
+      "<p>This building, labeled 'UNDRTKR' on the map, represents the Charbonnet Funeral Home. This funeral home, founded in 1883, '<a target='blank' href='https://acloserwalknola.com/places/charbonnet-labat-glapion-funeral-home/#:~:text=Founded%20in%201883%20by%20members,remains%20as%20vital%20as%20ever'>has been a pillar of the Treme neighborhood for generations</a>' and remains an operational business. During the 1960s, the Charbonnet family were vocal advocates against the construction of the I-10 overpass.</p>" +
+      "<img src='images/tambourne-and-fan-funeral-1977.jpg' alt='Jazz funeral' width='300px'/>";
 
-        var funeralHomePopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var funeralHomePopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var funeralHome = L.polygon(funeralHome_coords, {
+    var funeralHome = L.polygon(funeralHome_coords, {
+      color: '#2A689A'
+    }).addTo(map3);
+    funeralHome.on('click', function() {
+      map3.fitBounds(funeralHome.getBounds());
+    });
+    funeralHome.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      funeralHome.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map3);
-        funeralHome.on('click', function() {
-          map3.fitBounds(funeralHome.getBounds());
-        });
-        funeralHome.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          funeralHome.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        funeralHome.bindPopup(funeralHomePopup, funeralHomePopup_options);
-        funeralHome.on('click', function(e) {
-          this.openPopup();
-        });
-        funeralHome.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    funeralHome.bindPopup(funeralHomePopup, funeralHomePopup_options);
+    funeralHome.on('click', function(e) {
+      this.openPopup();
+    });
+    funeralHome.on('', function(e) {
+      this.closePopup();
+    });
 
-        var mutualAid_coords = [
-          [-375.5851171875, 258.50624999999997],
-          [-375.84011718749997, 299.94374999999997],
-          [-395.73011718749996, 299.30625],
-          [-388.4626171875, 257.99625]
-        ]
+    var mutualAid_coords = [
+      [-375.5851171875, 258.50624999999997],
+      [-375.84011718749997, 299.94374999999997],
+      [-395.73011718749996, 299.30625],
+      [-388.4626171875, 257.99625]
+    ]
 
-        var mutualAidPopup = "<h2><b>Economy Mutual Aid Hall</b></h2>" + "<h3>1422 Ursulines</h3>" +
-          "<p>This building served as the second location for the Economy Society. Founded in 1836, the Economy Society operated for over a century, and exceeded 160 members at its peak. The large, two-story building hosted various banquets and soirees that became central fixtures of the developing jazz culture. Read more at Vol. XVIII of <a target='blank' href='https://jazz.tulane.edu/sites/default/files/jazz/docs/jazz_archivist/Jazz_Archivist_vol18_2004.pdf'><i>The Jazz Archive</i></a>.</p>" +
-          "<img src='images/econ-hall.jpg' width='300px'>";
+    var mutualAidPopup = "<h2><b>Economy Mutual Aid Hall</b></h2>" + "<h3>1422 Ursulines</h3>" +
+      "<p>This building served as the second location for the Economy Society. Founded in 1836, the Economy Society operated for over a century, and exceeded 160 members at its peak. The large, two-story building hosted various banquets and soirees that became central fixtures of the developing jazz culture. Read more at Vol. XVIII of <a target='blank' href='https://jazz.tulane.edu/sites/default/files/jazz/docs/jazz_archivist/Jazz_Archivist_vol18_2004.pdf'><i>The Jazz Archive</i></a>.</p>" +
+      "<img src='images/econ-hall.jpg' width='300px'>";
 
-        var mutualAidPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var mutualAidPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var mutualAid = L.polygon(mutualAid_coords, {
+    var mutualAid = L.polygon(mutualAid_coords, {
+      color: '#2A689A'
+    }).addTo(map3);
+    mutualAid.on('click', function() {
+      map3.fitBounds(mutualAid.getBounds());
+    });
+    mutualAid.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      mutualAid.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map3);
-        mutualAid.on('click', function() {
-          map3.fitBounds(mutualAid.getBounds());
-        });
-        mutualAid.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          mutualAid.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        mutualAid.bindPopup(mutualAidPopup, mutualAidPopup_options);
-        mutualAid.on('click', function(e) {
-          this.openPopup();
-        });
-        mutualAid.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    mutualAid.bindPopup(mutualAidPopup, mutualAidPopup_options);
+    mutualAid.on('click', function(e) {
+      this.openPopup();
+    });
+    mutualAid.on('', function(e) {
+      this.closePopup();
+    });
 
-        // Map 4 elements
+    // Map 4 elements
 
-        var straightClg_coords = [
-          [-373.8515625, 101.125],
-          [-373.6015625, 117.875],
-          [-420.8515625, 118.625],
-          [-420.6015625, 101.875]
-        ];
+    var straightClg_coords = [
+      [-373.8515625, 101.125],
+      [-373.6015625, 117.875],
+      [-420.8515625, 118.625],
+      [-420.6015625, 101.875]
+    ];
 
-        var straightClgPopup = "<h2><b>Straight University Boarding House and Dining Hall</b></h2>" + "<h3>1423 North Claiborne</h3>" +
-          "<p>In 2009, the Preservation Resource Center of New Orleans (PRC) acquired the property at 1423 North Claiborne, and to their surprise discovered it to be one of the last remaining buildings associated with Straight University (SU). Founded in 1869, SU provided higher education to Black folks following the Civil War. <a target='blank' href='https://prcno.org/prc-revitalizes-last-standing-building-new-orleans-original-african-american-university/'>Read more about the PRC's restoration efforts</a>.</p>" +
-          "<img src='images/straightuni.jpg' alt='Jazz funeral' width='300px'/>";
+    var straightClgPopup = "<h2><b>Straight University Boarding House and Dining Hall</b></h2>" + "<h3>1423 North Claiborne</h3>" +
+      "<p>In 2009, the Preservation Resource Center of New Orleans (PRC) acquired the property at 1423 North Claiborne, and to their surprise discovered it to be one of the last remaining buildings associated with Straight University (SU). Founded in 1869, SU provided higher education to Black folks following the Civil War. <a target='blank' href='https://prcno.org/prc-revitalizes-last-standing-building-new-orleans-original-african-american-university/'>Read more about the PRC's restoration efforts</a>.</p>" +
+      "<img src='images/straightuni.jpg' alt='Jazz funeral' width='300px'/>";
 
-        var straightClgPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var straightClgPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var straightClg = L.polygon(straightClg_coords, {
+    var straightClg = L.polygon(straightClg_coords, {
+      color: '#2A689A'
+    }).addTo(map4);
+    straightClg.on('click', function() {
+      map4.fitBounds(straightClg.getBounds());
+    });
+    straightClg.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      straightClg.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map4);
-        straightClg.on('click', function() {
-          map4.fitBounds(straightClg.getBounds());
-        });
-        straightClg.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          straightClg.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        straightClg.bindPopup(straightClgPopup, straightClgPopup_options);
-        straightClg.on('click', function(e) {
-          this.openPopup();
-        });
-        straightClg.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    straightClg.bindPopup(straightClgPopup, straightClgPopup_options);
+    straightClg.on('click', function(e) {
+      this.openPopup();
+    });
+    straightClg.on('', function(e) {
+      this.closePopup();
+    });
 
-        var palimpsest_coords = [
-          [-398.234296875, 68.91375],
-          [-397.08679687499995, 96.19874999999999],
-          [-431.51179687499996, 97.85624999999999],
-          [-431.89429687499995, 69.67875]
-        ]
+    var palimpsest_coords = [
+      [-398.234296875, 68.91375],
+      [-397.08679687499995, 96.19874999999999],
+      [-431.51179687499996, 97.85624999999999],
+      [-431.89429687499995, 69.67875]
+    ]
 
-        var palimpsestPopup = "<h2><b>Sanborn map palimpsests</b></h2>" + "<h3>A feature of Sanborn maps</h3>" +
-          "<p>Strictly defined, the word 'palimpsest' refers to a piece of writing in which the original text has been effaced to make room for new writing, but of which traces still remain. Look closely at the map canvsas highlighted here, and you'll notice that something's off: at 1413 North Claiborne, someone has pasted a sheet of paper on top of the Sanborn map. These '<a target'blank' href='https://books.google.com/books?id=fOSWLh-6UZsC&pg=PA231&lpg=PA231&dq=sanborn+map+palimpsest&source=bl&ots=o-HUTDkJWi&sig=ACfU3U3gEwNSRarkYFI9CXhIzQ7DOl88pQ&hl=en&sa=X&ved=2ahUKEwj4oqj9l5bqAhUyRTABHZgiB_0Q6AEwCXoECAoQAQ#v=onepage&q=sanborn%20map%20palimpsest&f=false'>paste-on additions</a>' were a common practice of the Sanborn map company's surveyors. Instead of re-surveying the entire city every time a map needed to be updated, the surveyor would save precious time and simply paste updates on top of the existing maps. In doing so, they produced what Jack Swab has called <a target='blank' href='https://aag.secure-abstracts.com/AAG%20Annual%20Meeting%202018/abstracts-gallery/13930'>Sanborn map palimpsests</a>, wherein the maps accumulated additions, but a reader could still apprehend traces of the original.</p>" +
-          "<p>How many palimpsests can you identify within this address? What about across all 6 exhibits?</p>";
+    var palimpsestPopup = "<h2><b>Sanborn map palimpsests</b></h2>" + "<h3>A feature of Sanborn maps</h3>" +
+      "<p>Strictly defined, the word 'palimpsest' refers to a piece of writing in which the original text has been effaced to make room for new writing, but of which traces still remain. Look closely at the map canvsas highlighted here, and you'll notice that something's off: at 1413 North Claiborne, someone has pasted a sheet of paper on top of the Sanborn map. These '<a target'blank' href='https://books.google.com/books?id=fOSWLh-6UZsC&pg=PA231&lpg=PA231&dq=sanborn+map+palimpsest&source=bl&ots=o-HUTDkJWi&sig=ACfU3U3gEwNSRarkYFI9CXhIzQ7DOl88pQ&hl=en&sa=X&ved=2ahUKEwj4oqj9l5bqAhUyRTABHZgiB_0Q6AEwCXoECAoQAQ#v=onepage&q=sanborn%20map%20palimpsest&f=false'>paste-on additions</a>' were a common practice of the Sanborn map company's surveyors. Instead of re-surveying the entire city every time a map needed to be updated, the surveyor would save precious time and simply paste updates on top of the existing maps. In doing so, they produced what Jack Swab has called <a target='blank' href='https://aag.secure-abstracts.com/AAG%20Annual%20Meeting%202018/abstracts-gallery/13930'>Sanborn map palimpsests</a>, wherein the maps accumulated additions, but a reader could still apprehend traces of the original.</p>" +
+      "<p>How many palimpsests can you identify within this address? What about across all 6 exhibits?</p>";
 
-        var palimpsestPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var palimpsestPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var palimpsest = L.polygon(palimpsest_coords, {
+    var palimpsest = L.polygon(palimpsest_coords, {
+      color: '#2A689A'
+    }).addTo(map4);
+    palimpsest.on('click', function() {
+      map4.fitBounds(palimpsest.getBounds());
+    });
+    palimpsest.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      palimpsest.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map4);
-        palimpsest.on('click', function() {
-          map4.fitBounds(palimpsest.getBounds());
-        });
-        palimpsest.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          palimpsest.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        palimpsest.bindPopup(palimpsestPopup, palimpsestPopup_options);
-        palimpsest.on('click', function(e) {
-          this.openPopup();
-        });
-        palimpsest.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    palimpsest.bindPopup(palimpsestPopup, palimpsestPopup_options);
+    palimpsest.on('click', function(e) {
+      this.openPopup();
+    });
+    palimpsest.on('', function(e) {
+      this.closePopup();
+    });
 
-        // Map 5 elements
+    // Map 5 elements
 
-        var tremeMarketBank_coords = [
-          [-119.6335464421319, 181.57742780366286],
-          [-119.82479943045985, 205.0523440743645],
-          [-130.21621179627806, 204.9251087558241],
-          [-130.34371378849667, 200.72634324399132],
-          [-143.4764189870154, 200.53549026618074],
-          [-143.5401699831247, 181.32295716658209]
-        ];
+    var tremeMarketBank_coords = [
+      [-119.6335464421319, 181.57742780366286],
+      [-119.82479943045985, 205.0523440743645],
+      [-130.21621179627806, 204.9251087558241],
+      [-130.34371378849667, 200.72634324399132],
+      [-143.4764189870154, 200.53549026618074],
+      [-143.5401699831247, 181.32295716658209]
+    ];
 
-        var tremeMarketBankPopup = "<h2><b>Treme Market Branch of the Canal-Commercial Trust and Savings Bank</b></h2>" + "<h3>800 North Claiborne</h3>" +
-          "<p>This bank opened in 1925 to serve the Treme neighborhood. A headline in the local paper, the <i>Times Picayune</i>, praised it as '<a target='blank' href='https://www.trememarketbranch.com/history'>perhaps the most unique and interesting of the branch banks in the city</a>.' It has undergone various ownership changes through the years, transforming into a leather shop in 1953, and was repurposed as an event space in 2016.</p>" +
-          "<img src='images/bank.jpeg' alt='Jazz funeral' width='300px'/>";
+    var tremeMarketBankPopup = "<h2><b>Treme Market Branch of the Canal-Commercial Trust and Savings Bank</b></h2>" + "<h3>800 North Claiborne</h3>" +
+      "<p>This bank opened in 1925 to serve the Treme neighborhood. A headline in the local paper, the <i>Times Picayune</i>, praised it as '<a target='blank' href='https://www.trememarketbranch.com/history'>perhaps the most unique and interesting of the branch banks in the city</a>.' It has undergone various ownership changes through the years, transforming into a leather shop in 1953, and was repurposed as an event space in 2016.</p>" +
+      "<img src='images/bank.jpeg' alt='Jazz funeral' width='300px'/>";
 
-        var tremeMarketBankPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var tremeMarketBankPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var tremeMarketBank = L.polygon(tremeMarketBank_coords, {
+    var tremeMarketBank = L.polygon(tremeMarketBank_coords, {
+      color: '#2A689A'
+    }).addTo(map5);
+    tremeMarketBank.on('click', function() {
+      map5.fitBounds(tremeMarketBank.getBounds());
+    });
+    tremeMarketBank.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      tremeMarketBank.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map5);
-        tremeMarketBank.on('click', function() {
-          map5.fitBounds(tremeMarketBank.getBounds());
-        });
-        tremeMarketBank.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          tremeMarketBank.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        tremeMarketBank.bindPopup(tremeMarketBankPopup, tremeMarketBankPopup_options);
-        tremeMarketBank.on('click', function(e) {
-          this.openPopup();
-        });
-        tremeMarketBank.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    tremeMarketBank.bindPopup(tremeMarketBankPopup, tremeMarketBankPopup_options);
+    tremeMarketBank.on('click', function(e) {
+      this.openPopup();
+    });
+    tremeMarketBank.on('', function(e) {
+      this.closePopup();
+    });
 
-        var labranchePharm_coords = [
-          [-115.69429687499999, 102.57374999999999],
-          [-115.69429687499999, 131.64374999999998],
-          [-130.994296875, 131.77124999999998],
-          [-130.994296875, 102.82875]
-        ]
+    var labranchePharm_coords = [
+      [-115.69429687499999, 102.57374999999999],
+      [-115.69429687499999, 131.64374999999998],
+      [-130.994296875, 131.77124999999998],
+      [-130.994296875, 102.82875]
+    ]
 
-        var labranchePharmPopup = "<h2><b>LaBranche's Pharmacy</b></h2>" + "<h3>716 North Claiborne</h3>" +
-          "<p>According to the <a href='http://amistadresearchcenter.tulane.edu/archon/?p=accessions/accession&id=1125' target='blank'>Amistad Research Center</a>, LaBranche's Drug Store opened in 1907. The Woods Directory below has LaBranche's listed at 716 N. Claiborne, intersecting Orleans Avenue. The location <a href='http://www.creolegen.org/2013/02/11/belfields-pharmacy-1925-1955/' target='blank'>may have moved to 818 N. Claiborne</a> by 1918 (just a block to the right on this same map). Regardless of its absolute location, it was <a href='http://amistadresearchcenter.tulane.edu/archon/?p=accessions/accession&id=1125' target='blank'>fondly remembered</a> by residents and viewed as a fixture in the community.</p>" +
-          "<img src='https://ksr-ugc.imgix.net/assets/022/291/060/81c5f1c88f62921bcd37fbe6fe63cb62_original.png?ixlib=rb-2.1.0&w=680&fit=max&v=1534805702&auto=format&frame=1&lossless=true&s=b83301b0d783469a99b87a1899db4c9e' width='300px'>";
+    var labranchePharmPopup = "<h2><b>LaBranche's Pharmacy</b></h2>" + "<h3>716 North Claiborne</h3>" +
+      "<p>According to the <a href='http://amistadresearchcenter.tulane.edu/archon/?p=accessions/accession&id=1125' target='blank'>Amistad Research Center</a>, LaBranche's Drug Store opened in 1907. The Woods Directory below has LaBranche's listed at 716 N. Claiborne, intersecting Orleans Avenue. The location <a href='http://www.creolegen.org/2013/02/11/belfields-pharmacy-1925-1955/' target='blank'>may have moved to 818 N. Claiborne</a> by 1918 (just a block to the right on this same map). Regardless of its absolute location, it was <a href='http://amistadresearchcenter.tulane.edu/archon/?p=accessions/accession&id=1125' target='blank'>fondly remembered</a> by residents and viewed as a fixture in the community.</p>" +
+      "<img src='https://ksr-ugc.imgix.net/assets/022/291/060/81c5f1c88f62921bcd37fbe6fe63cb62_original.png?ixlib=rb-2.1.0&w=680&fit=max&v=1534805702&auto=format&frame=1&lossless=true&s=b83301b0d783469a99b87a1899db4c9e' width='300px'>";
 
-        var labranchePharmPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var labranchePharmPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var labranchePharm = L.polygon(labranchePharm_coords, {
+    var labranchePharm = L.polygon(labranchePharm_coords, {
+      color: '#2A689A'
+    }).addTo(map5);
+    labranchePharm.on('click', function() {
+      map5.fitBounds(labranchePharm.getBounds());
+    });
+    labranchePharm.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      labranchePharm.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map5);
-        labranchePharm.on('click', function() {
-          map5.fitBounds(labranchePharm.getBounds());
-        });
-        labranchePharm.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          labranchePharm.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        labranchePharm.bindPopup(labranchePharmPopup, labranchePharmPopup_options);
-        labranchePharm.on('click', function(e) {
-          this.openPopup();
-        });
-        labranchePharm.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    labranchePharm.bindPopup(labranchePharmPopup, labranchePharmPopup_options);
+    labranchePharm.on('click', function(e) {
+      this.openPopup();
+    });
+    labranchePharm.on('', function(e) {
+      this.closePopup();
+    });
 
-        var historicTremeMark_coords = [
-          [-235.72359375, 80.4525],
-          [-235.72359375, 92.94749999999999],
-          [-331.60359374999996, 92.6925],
-          [-331.09359374999997, 79.6875]
-        ]
+    var historicTremeMark_coords = [
+      [-235.72359375, 80.4525],
+      [-235.72359375, 92.94749999999999],
+      [-331.60359374999996, 92.6925],
+      [-331.09359374999997, 79.6875]
+    ]
 
-        var historicTremeMarkPopup = "<h2><b>Original Location of Treme Market</b></h2>" + "<h3>Orleans Avenue neutral ground</h3>" +
-          "<p>Starting in the early 19th century, the neutral ground at Orleans Avenue hosted the original Treme Market. Although it was described as dilapidated by the 1930s, it functioned as a <a target='blank' href='https://www.trememarketbranch.com/history'>hub of social and commercial activity</a> and helped to create the conditions for other businesses at the Orleans and North Claiborne intersection to flourish.</p>" +
-          "<img src='https://upload.wikimedia.org/wikipedia/commons/7/7e/Treme_Market_Arch_2_New_Orleans.jpg' width='300px'>"
-          ;
+    var historicTremeMarkPopup = "<h2><b>Original Location of Treme Market</b></h2>" + "<h3>Orleans Avenue neutral ground</h3>" +
+      "<p>Starting in the early 19th century, the neutral ground at Orleans Avenue hosted the original Treme Market. Although it was described as dilapidated by the 1930s, it functioned as a <a target='blank' href='https://www.trememarketbranch.com/history'>hub of social and commercial activity</a> and helped to create the conditions for other businesses at the Orleans and North Claiborne intersection to flourish.</p>" +
+      "<img src='https://upload.wikimedia.org/wikipedia/commons/7/7e/Treme_Market_Arch_2_New_Orleans.jpg' width='300px'>";
 
-        var historicTremeMarkPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var historicTremeMarkPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var historicTremeMark = L.polygon(historicTremeMark_coords, {
+    var historicTremeMark = L.polygon(historicTremeMark_coords, {
+      color: '#2A689A'
+    }).addTo(map5);
+    historicTremeMark.on('click', function() {
+      map5.fitBounds(historicTremeMark.getBounds());
+    });
+    historicTremeMark.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      historicTremeMark.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map5);
-        historicTremeMark.on('click', function() {
-          map5.fitBounds(historicTremeMark.getBounds());
-        });
-        historicTremeMark.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          historicTremeMark.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        historicTremeMark.bindPopup(historicTremeMarkPopup, historicTremeMarkPopup_options);
-        historicTremeMark.on('click', function(e) {
-          this.openPopup();
-        });
-        historicTremeMark.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    historicTremeMark.bindPopup(historicTremeMarkPopup, historicTremeMarkPopup_options);
+    historicTremeMark.on('click', function(e) {
+      this.openPopup();
+    });
+    historicTremeMark.on('', function(e) {
+      this.closePopup();
+    });
 
-        var tremeMarketBldg_coords = [
-          [-298.96359375, 24.3525],
-          [-298.96359375, 45.5175],
-          [-278.56359375, 45.772499999999994],
-          [-278.56359375, 66.4275],
-          [-309.41859374999996, 67.1925],
-          [-309.16359374999996, 24.862499999999997]
-        ]
+    var tremeMarketBldg_coords = [
+      [-298.96359375, 24.3525],
+      [-298.96359375, 45.5175],
+      [-278.56359375, 45.772499999999994],
+      [-278.56359375, 66.4275],
+      [-309.41859374999996, 67.1925],
+      [-309.16359374999996, 24.862499999999997]
+    ]
 
-        var tremeMarketBldgPopup = "<h2><b>Historic Treme Market</b></h2>" + "<h3>1508-1516 Orleans</h3>" +
-          "<p>New Orleans has a vibrant market culture that dates back to the 18th century. The original Treme Market was located on the neutral ground of Orleans Avenue, just across from this location at 1508 Orleans. At its peak, as <a href='https://ugapress.org/book/9780820353555/creole-italian/' target='blank'>Justin Nystrom</a> has observed, the Treme Market was one of the only markets that rivaled the size and scope of the famous French Market. The Treme Market bustled with activity between its completion in 1933 and the public market system's declassification in 1946; according to an <a href='https://www.nps.gov/nr/feature/places/pdfs/16000711.pdf' target='blank'>application for its listing on the National Register of Historic Places</a>, the Market had sixteen stalls and bore great cultural significance that extended beyond the Treme neighborhood and into the city's 'changing philosophy of how food marketing sites should look and function.'</p>";
+    var tremeMarketBldgPopup = "<h2><b>Historic Treme Market</b></h2>" + "<h3>1508-1516 Orleans</h3>" +
+      "<p>New Orleans has a vibrant market culture that dates back to the 18th century. The original Treme Market was located on the neutral ground of Orleans Avenue, just across from this location at 1508 Orleans. At its peak, as <a href='https://ugapress.org/book/9780820353555/creole-italian/' target='blank'>Justin Nystrom</a> has observed, the Treme Market was one of the only markets that rivaled the size and scope of the famous French Market. The Treme Market bustled with activity between its completion in 1933 and the public market system's declassification in 1946; according to an <a href='https://www.nps.gov/nr/feature/places/pdfs/16000711.pdf' target='blank'>application for its listing on the National Register of Historic Places</a>, the Market had sixteen stalls and bore great cultural significance that extended beyond the Treme neighborhood and into the city's 'changing philosophy of how food marketing sites should look and function.'</p>";
 
-        var tremeMarketBldgPopup_options = {
-          'maxWidth': '300',
-          'className': 'custom',
-          'keepInView': 'True'
-        }
+    var tremeMarketBldgPopup_options = {
+      'maxWidth': '300',
+      'className': 'custom',
+      'keepInView': 'True'
+    }
 
-        var tremeMarketBldg = L.polygon(tremeMarketBldg_coords, {
+    var tremeMarketBldg = L.polygon(tremeMarketBldg_coords, {
+      color: '#2A689A'
+    }).addTo(map5);
+    tremeMarketBldg.on('click', function() {
+      map5.fitBounds(tremeMarketBldg.getBounds());
+    });
+    tremeMarketBldg.on('mouseover', function() {
+      this.setStyle({
+        color: '#add8e6' //or whatever style you wish to use;
+      });
+      tremeMarketBldg.on('mouseout', function() {
+        this.setStyle({
           color: '#2A689A'
-        }).addTo(map5);
-        tremeMarketBldg.on('click', function() {
-          map5.fitBounds(tremeMarketBldg.getBounds());
-        });
-        tremeMarketBldg.on('mouseover', function() {
-          this.setStyle({
-            color: '#add8e6' //or whatever style you wish to use;
-          });
-          tremeMarketBldg.on('mouseout', function() {
-            this.setStyle({
-              color: '#2A689A'
-            })
-          });
-        });
-        tremeMarketBldg.bindPopup(tremeMarketBldgPopup, tremeMarketBldgPopup_options);
-        tremeMarketBldg.on('click', function(e) {
-          this.openPopup();
-        });
-        tremeMarketBldg.on('', function(e) {
-          this.closePopup();
-        });
+        })
+      });
+    });
+    tremeMarketBldg.bindPopup(tremeMarketBldgPopup, tremeMarketBldgPopup_options);
+    tremeMarketBldg.on('click', function(e) {
+      this.openPopup();
+    });
+    tremeMarketBldg.on('', function(e) {
+      this.closePopup();
+    });
 
-        //
-      </script>
+    //
+  </script>
 </body>
 
 <footer>
@@ -1106,8 +1162,7 @@
       <p style="text-align:center"><i>Creole Italian: Sicilian Immigrants and the Shaping of New Orleans Food Culture</i> by Justin Nystrom</p>
       <p style="text-align:center">Crutcher, Michael. 2010. <i>Treme: Race and Place in a New Orleans Neighborhood.</i></p>
       <br> -->
-      <p style="text-align:center; font-style:italic">By <a target="blank" href="https://geography.as.uky.edu/users/itsp222">Ian Spangler</a> /// Find me on <a target="blank" href="https://github.com/itspangler">GitHub</a> /// Follow me on <a target="blank"
-          href="https://twitter.com/itspangler">Twitter</a></p>
+      <p style="text-align:center; font-style:italic">By <a target="blank" href="https://geography.as.uky.edu/users/itsp222">Ian Spangler</a> /// Find me on <a target="blank" href="https://github.com/itspangler">GitHub</a> /// Follow me on <a target="blank" href="https://twitter.com/itspangler">Twitter</a> /// Powered with <a target="blank" href="https://getbootstrap.com/">Bootstrap</a></p>
     </div>
   </div>
 </footer>
