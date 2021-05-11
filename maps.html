@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exploring Historic North Claiborne</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600,700&amp;lang=en" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cinzel:300,400,600,700&amp;lang=en" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAsNP" crossorigin="anonymous">
+  <link rel="icon" href="images/icon.png" type="image/png" sizes="16x16">
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      /* background-color: #7f7f7f; */
+      margin: 0;
+      padding-top: 30px;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond";
+      color: black;
+      text-align: center;
+      font-size: 6.2em;
+      /* font-style: italic; */
+    }
+
+    h2 {
+      font-family: "Helvetica Neue";
+      color: black;
+      font-size: 1.75em;
+      font-weight: lighter;
+      /* font-style: italic; */
+    }
+
+    h3 {
+      font-family: "Helvetica Neue";
+      color: black;
+      font-size: 1.25em;
+      font-weight: lighter;
+      font-style: italic;
+    }
+
+    #map-gallery {
+      font-family: "Cormorant Garamond";
+      color: black;
+      text-align: center;
+      font-size: 6.2em;
+      /* font-style: italic; */
+    }
+
+    #background {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+    }
+
+    p {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+    }
+
+    li {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+      text-indent: 20px;
+      list-style-position: outside;
+    }
+
+    ul {
+      font-family: "Cormorant Garamond";
+      font-size: 1.1em;
+      text-indent: 20px;
+      list-style-position: outside;
+      top: 0;
+    }
+
+    #iiif-map1 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+
+    #iiif-map2 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+      /* -webkit-transform: rotate(90deg); */
+    }
+
+    #iiif-map3 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+
+    #iiif-map3 img {
+      filter: brightness(0.9)
+    }
+
+    #iiif-map4 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+
+    #iiif-map5 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+
+    #iiif-map6 {
+      /* position: fixed; */
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+
+    .tab {
+      margin-left: 40px;
+    }
+
+    .divLast {
+      top: 0px;
+      margin: 0px;
+      padding: 0px 2px 2px 3px;
+      border-width: 2px;
+      border-bottom-width: 2px;
+      border-bottom-color: #ddd;
+      border-bottom-style: solid;
+      width: 100%;
+    }
+
+    /* img {
+      border: 3px solid #555;
+    } */
+  </style>
+</head>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white divLast">
+  <div class="container">
+    <a style="font-family:Cormorant Garamond" class="navbar-brand" href="index.html">Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html#background">Background <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="maps.html">Map Gallery</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Exhibits
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="maps.html#iiif-map1">Exhibit 1</a>
+            <a class="dropdown-item" href="maps.html#iiif-map4">Exhibit 2</a>
+            <a class="dropdown-item" href="maps.html#iiif-map3">Exhibit 3</a>
+            <a class="dropdown-item" href="maps.html#iiif-map2">Exhibit 4</a>
+            <a class="dropdown-item" href="maps.html#iiif-map5">Exhibit 5</a>
+          </div>
+    </div>
+  </div>
+</nav>
+<body>
+  <div class="container mt-2 p-4 bg-white text-dark">
+  <div id="map-gallery" style="text-align:center">Map Gallery</div>
+  <!-- Exhibit 1 -->
+  <div class="row mt-3 bg-white text-dark">
+    <div class="col-sm py-3 bg-white text-dark">
+      <div class="col">
+      </div>
+      <div class="card" style="width: 100%;">
+        <div id="iiif-map1"></div>
+        <div class="card-body">
+          <h2 class="card-title">Exhibit 1: Vol. 1, Sheet 16 (1950)</h2>
+          <p class="card-text">The 1500 blocks of Claiborne, abutting St. Bernard Circle. Explore Circle Food Store, Beck's Restaurant, and the neutral ground of Claiborne Avenue. Learn about some conventions of Sanborn maps.</p>
+          <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=17" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Exhibit 2 -->
+  <div class="row mt-3 bg-white text-dark">
+    <div class="col-sm py-3 bg-white">
+      <div class="col">
+      </div>
+      <div class="card" style="width: 100%;">
+        <div id="iiif-map4"></div>
+        <div class="card-body">
+          <h2 class="card-title">Exhibit 2: Vol. 1, Sheet 25 (1950)</h2>
+          <p class="card-text">The lakeside blocks of North Claiborne, intersecting Esplanade. Explore the former Straight University Boarding House and Dining Hall. Learn about the cartographic practice of Sanborn map palimpsests.</p>
+          <a href="https://www.loc.gov/resource/g4014nm.g03376195001/?sp=26" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Exhibit 3 -->
+  <div class="row mt-3 bg-white text-dark">
+    <div class="col-sm py-3 bg-white">
+      <div class="col">
+      </div>
+      <div class="card" style="width: 100%;">
+        <div id="iiif-map3"></div>
+        <div class="card-body">
+          <h2 class="card-title">Exhibit 3: Vol. 2, Sheet 107 (1940)</h2>
+          <p class="card-text">The 900 and 1000 blocks of North Claiborne, the boundaries of this map land in the heart of the Treme neighborhood. Explore the Charbonnet Funeral Home, the Economy Society, and a residential block of Treme.
+            Learn about how urban
+            renewal projects affected the Treme neighborhood in the 1960s and 1970s.</p>
+          <a href="https://www.loc.gov/resource/g4014nm.g03376194002/?sp=10&r=-1.387,-0.011,3.773,1.656,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Exhibit 4 -->
+  <div class="row mt-3 bg-white text-dark">
+    <div class="col-sm py-3 bg-white">
+      <div class="col">
+      </div>
+      <div class="card" style="width: 100%;">
+        <div id="iiif-map2"></div>
+        <div class="card-body">
+          <h2 class="card-title">Exhibit 4: Vol. 2, Sheet 125 (1940)</h2>
+          <p class="card-text">The lakeside blocks of North Claiborne between Orleans and St. Philip (note the map is rotated 90° counterclockwise). Explore People's Benevolent Life Insurance and see how the space looks today.</p><br>
+          <a href="https://www.loc.gov/resource/g4014nm.g03376194002/?sp=28" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Exhibit 5 -->
+  <div class="row mt-3 bg-white text-dark">
+    <div class="col-sm py-3 bg-white">
+      <div class="col">
+      </div>
+      <div class="card" style="width: 100%;">
+        <div id="iiif-map5"></div>
+        <div class="card-body">
+          <h2 class="card-title">Exhibit 5: Vol. 2, Sheet 106 (1940)</h2>
+          <p class="card-text">The intersection of North Claiborne and Orleans Avenues. Explore the Treme Market, LaBranche's Pharmacy, and the Treme Market Branch Bank.</p>
+          <a href="https://www.loc.gov/resource/g4014nm.g03376194002/?sp=9&r=-1.387,-0.003,3.773,1.656,0" target="blank" class="btn btn-secondary" style="font-family:Cormorant Garamond">View original map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+  <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v3.0.0/leaflet-iiif.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- make sure to import Leaflet-IIIF *after* the main Leaflet package -->
+  <script src="app.js"></script>
+</body>
+
+</html>
