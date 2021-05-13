@@ -15,32 +15,19 @@ const vol1sheet06_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-servic
 let zoomHome5 = L.Control.zoomHome();
 zoomHome5.addTo(map5);
 
+map5.on('dragend', function(e) {
+  this.closePopup();
+});
+
 // Map 5 elements
 
-$.getScript( "maps/map5/annotations/tremeMarketBank.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map5/annotations/labranchePharm.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map5/annotations/historicTremeMark.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map5/annotations/tremeMarketBldg.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
+$.when(
+  $.getScript( "maps/map5/annotations/tremeMarketBank.js"),
+  $.getScript( "maps/map5/annotations/labranchePharm.js"),
+  $.getScript( "maps/map5/annotations/historicTremeMark.js"),
+  $.getScript( "maps/map5/annotations/tremeMarketBldg.js"),
+  $.Deferred(function( deferred ){
+      $( deferred.resolve );
+  })
+).done(function(){
 });

@@ -21,38 +21,18 @@ map1.on('dragend', function(e) {
   this.closePopup();
 });
 
+// Return lat lng on click
+
 // LOAD MAP 1 ELEMENTS
 
-// Beck's Restaurant
-
-$.getScript( "maps/map1/annotations/becksRest.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
+$.when(
+  $.getScript( "maps/map1/annotations/becksRest.js"),
+  $.getScript( "maps/map1/annotations/circleGrocery.js"),
+  $.getScript( "maps/map1/annotations/neutralGround.js"),
+  $.getScript( "maps/map1/annotations/northArrow.js"),
+  $.getScript( "maps/map1/annotations/fireStation.js"),
+  $.Deferred(function( deferred ){
+      $( deferred.resolve );
+  })
+).done(function(){
 });
-
-$.getScript( "maps/map1/annotations/circleGrocery.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map1/annotations/neutralGround.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map1/annotations/northArrow.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-// Create Beck's restaurant popup
-
-// Create north arrow popup

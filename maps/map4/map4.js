@@ -16,18 +16,17 @@ var vol1sheet25_1950 = new L.tileLayer.iiif('https://tile.loc.gov/image-services
 let zoomHome4 = L.Control.zoomHome();
 zoomHome4.addTo(map4);
 
-// Map 4 elements
-
-$.getScript( "maps/map4/annotations/palimpsest.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
+map4.on('dragend', function(e) {
+  this.closePopup();
 });
 
-$.getScript( "maps/map4/annotations/straightClg.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
+// Map 4 elements
+
+$.when(
+  $.getScript( "maps/map4/annotations/palimpsest.js"),
+  $.getScript( "maps/map4/annotations/straightClg.js"),
+  $.Deferred(function( deferred ){
+      $( deferred.resolve );
+  })
+).done(function(){
 });

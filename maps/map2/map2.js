@@ -15,27 +15,19 @@ const vol2sheet25_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-servic
 let zoomHome2 = L.Control.zoomHome();
 zoomHome2.addTo(map2);
 
+map2.on('dragend', function(e) {
+  this.closePopup();
+});
+
 // MAP 2 ELEMENTS
 
 // Set coordinates for map 2 elements
-
-$.getScript( "maps/map2/annotations/peoplesInsurance.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map2/annotations/insuranceGone.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map2/annotations/club.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
+$.when(
+  $.getScript( "maps/map2/annotations/peoplesInsurance.js"),
+  $.getScript( "maps/map2/annotations/insuranceGone.js"),
+  $.getScript( "maps/map2/annotations/club.js"),
+  $.Deferred(function( deferred ){
+      $( deferred.resolve );
+  })
+).done(function(){
 });

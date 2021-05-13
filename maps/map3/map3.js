@@ -14,25 +14,19 @@ var vol2sheet07_1940 = new L.tileLayer.iiif('https://tile.loc.gov/image-services
 
 let zoomHome3 = L.Control.zoomHome();
 zoomHome3.addTo(map3);
+
+map3.on('dragend', function(e) {
+  this.closePopup();
+});
+
 // Map 3 elements
 
-$.getScript( "maps/map3/annotations/funeralHome.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map3/annotations/mutualAid.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
-});
-
-$.getScript( "maps/map3/annotations/tremeCommCenter.js", function( data, textStatus, jqxhr ) {
-  // console.log( data ); // Data returned
-  // console.log( textStatus ); // Success
-  // console.log( jqxhr.status ); // 200
-  // console.log( "Load was performed." );
+$.when(
+  $.getScript( "maps/map3/annotations/funeralHome.js"),
+  $.getScript( "maps/map3/annotations/mutualAid.js"),
+  $.getScript( "maps/map3/annotations/tremeCommCenter.js"),
+  $.Deferred(function( deferred ){
+      $( deferred.resolve );
+  })
+).done(function(){
 });
