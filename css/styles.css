@@ -157,3 +157,7 @@ ul {
   border-bottom-style: solid;
   width: 100%;
 }
+
+.divscroll {
+  overflow-y: auto;
+}
