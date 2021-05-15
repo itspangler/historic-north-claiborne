@@ -34,7 +34,7 @@ becksRest.on('mouseover', function() {
   });
 });
 becksRest.bindPopup(becksRestPopup, becksRestPopup_options);
-becksRest.on('click', function(e) {
+neutralGround.on('click', function(e) {
   this.openPopup();
 });
 becksRest.on('', function(e) {
