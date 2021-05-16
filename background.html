@@ -54,9 +54,9 @@
 
     <!-- Title end -->
     <div class="card mb-3 bg-white">
-      <img class="card-img-top" src="images/claiborne-1947-header.jpg" alt="Card image cap">
-      <div id="background" class="card-text" style="text-align:center"><small class="text-muted">North Claiborne Avenue at the intersection of Ursulines and Claiborne, 1947. (<a target='blank'
-            href='https://architecture.tulane.edu/sites/architecture.tulane.edu/files/styles/gallery-popup/public/timeline-entry//img_3_1979.325.5136.jpg?itok=LPezOyuo'>Source</a>)</small></div>
+      <img class="card-img-top with-bg-size" src="images/inset-map.png" alt="Card image cap">
+      <div id="background" class="card-text" style="text-align:center"><small class="text-muted">Locator map for the North Claiborne Corridor obscured by I-10, map by author. (<a href='
+            https://portal-nolagis.opendata.arcgis.com/'>Data source</a>)</small></div>
       <div class="card-body">
         <div class="row">
           <div class="col-12 col-md-8">
@@ -66,11 +66,25 @@
                 href="https://www.loc.gov/collections/sanborn-maps/about-this-collection/">their
                 website</a>. In this case, we are using Sanborn maps to unearth different elements of the North Claiborne corridor's commercial district. In doing so, we will also identify some methodological elements – opportunities <i>and</i>
               limitations – of doing historical geographic research with Sanborn maps.</p>
-            <p style="text-indent:20px">THE SANBORN COMPANY was founded in 1866 by Daniel Alfred Sanborn, as a means to provide information about building quality to fire insurance underwriters. Indeed, in the late 19th century across the US, rapid urbanization and population growth led to a growing demand for the assessment of fire risk. It wasn't long before most major cities across the country had been surveyed by Sanborn.</p>
-            <p style="text-indent:20px">ALTHOUGH SANBORN discontinued fire insurance mapping midway through the 20th century, their maps remain useful geographic tools for understanding urban change across the US. Because they represented a significant amount of capital in the built envivronment, Sanborn maps followed extremely detailed standards and cartographic practices. Furthermore, they were extraordinarily detailed, providing information on building size, material, ownership, and more (all data points that an insurer would presumably want!). A critical examination of Sanborn maps helps to reveal the archival nature of cultural landscapes. Maps are power-laden objects, both telling the story of <i>and</i> actively producing the world they purport to represent. So, let's begin to explore the historical geographies of a street in New Orleans through Sanborn maps.</p>
-            <a href="maps.html" type="button" class="btn button-primary-override btn-lg btn-block" aria-pressed="false" autocomplete="off">
-              <h2>Explore the maps</h2>
-            </a>
+            <p style="text-indent:20px">THE SANBORN COMPANY was founded in 1866 by Daniel Alfred Sanborn, as a means to provide information about building quality to fire insurance underwriters. Indeed, in the late 19th century across the US, rapid
+              urbanization and population growth led to a growing demand for the assessment of fire risk. It wasn't long before most major cities across the country had been surveyed by Sanborn.</p>
+            <p style="text-indent:20px">ALTHOUGH SANBORN discontinued fire insurance mapping midway through the 20th century, their maps remain useful geographic tools for understanding urban change across the US. Because they represented a
+              significant amount of capital in the built envivronment, Sanborn maps followed extremely detailed standards and cartographic practices. Furthermore, they were extraordinarily detailed, providing information on building size, material,
+              ownership, and more (all data points that an insurer would presumably want!). A critical examination of Sanborn maps helps to reveal the archival nature of cultural landscapes. Maps are power-laden objects, both telling the story of
+              <i>and</i> actively producing the world they purport to represent. So, let's begin to explore the historical geographies of a street in New Orleans through Sanborn maps.</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-8">
+                  <a href="maps.html" type="button" class="btn button-primary-override btn-lg btn-block rounded-lg" aria-pressed="false" autocomplete="off">
+                    <h2>Explore the maps</h2>
+                  </a>
+                </div>
+                <div class="col-2">
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-6 col-md-4">
             <br>
@@ -92,7 +106,12 @@
       </div>
     </div>
 </body>
-
+<script>
+  var i = document.getElementById("image1");
+  i.style.clip = "rect(10x, auto, auto, 10px)";
+  i.style.top = "-10px";
+  i.style.left = "-10px";
+</script>
 <footer>
   <div class="row mt-3 bg-white text-dark">
     <div class="col-sm py-3 bg-white text-dark">

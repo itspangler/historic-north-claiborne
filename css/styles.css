@@ -161,3 +161,16 @@ ul {
 .divscroll {
   overflow-y: auto;
 }
+
+.clipzone
+{
+  position:relative;
+  width:100px;
+  height:100px;
+  overflow:hidden;
+}
+
+.clipped
+{
+  position:absolute;
+}
