@@ -16,7 +16,7 @@ h1 {
   font-family: "Cormorant Garamond";
   color: black;
   text-align: center;
-  font-size: 6.2em;
+  font-size: 5.5em;
   /* font-style: italic; */
 }
 
@@ -172,5 +172,7 @@ ul {
 
 .clipped
 {
+  width:100px;
+  /* height:100px; */
   position:absolute;
 }

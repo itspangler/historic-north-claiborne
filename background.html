@@ -54,9 +54,40 @@
 
     <!-- Title end -->
     <div class="card mb-3 bg-white">
-      <img class="card-img-top with-bg-size" src="images/inset-map.png" alt="Card image cap">
-      <div id="background" class="card-text" style="text-align:center"><small class="text-muted">Locator map for the North Claiborne Corridor obscured by I-10, map by author. (<a href='
-            https://portal-nolagis.opendata.arcgis.com/'>Data source</a>)</small></div>
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195002:03376_02_1950-0000/full/pct:25/90/default.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              Sanborn map atlas, Vol. 2, 1950. (<a target='blank' href='
+                    https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195002:03376_02_1950-0000/full/pct:25/90/default.jpg'>Data source</a>)
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/inset-map.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              Locator map for the North Claiborne Historic Corridor, map by author. (<a target='blank' href='
+                    https://portal-nolagis.opendata.arcgis.com/'>Data source</a>)
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- <img class="card-img-top" src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd401m:g4014m:g4014nm:g03376195002:03376_02_1950-0000/full/pct:25/90/default.jpg" alt="Card image cap"> -->
+      <div id="background" class="card-text" style="text-align:center"><small class="text-muted"></small></div>
       <div class="card-body">
         <div class="row">
           <div class="col-12 col-md-8">
@@ -71,7 +102,8 @@
             <p style="text-indent:20px">ALTHOUGH SANBORN discontinued fire insurance mapping midway through the 20th century, their maps remain useful geographic tools for understanding urban change across the US. Because they represented a
               significant amount of capital in the built envivronment, Sanborn maps followed extremely detailed standards and cartographic practices. Furthermore, they were extraordinarily detailed, providing information on building size, material,
               ownership, and more (all data points that an insurer would presumably want!). A critical examination of Sanborn maps helps to reveal the archival nature of cultural landscapes. Maps are power-laden objects, both telling the story of
-              <i>and</i> actively producing the world they purport to represent. So, let's begin to explore the historical geographies of a street in New Orleans through Sanborn maps.</p>
+              <i>and</i> actively producing the world they purport to represent. So, let's begin to explore the historical geographies of a street in New Orleans through Sanborn maps.
+            </p>
             <div class="container">
               <div class="row">
                 <div class="col-2">
@@ -105,12 +137,17 @@
         </div>
       </div>
     </div>
+  <!-- </div> -->
 </body>
-<script>
-  var i = document.getElementById("image1");
-  i.style.clip = "rect(10x, auto, auto, 10px)";
-  i.style.top = "-10px";
-  i.style.left = "-10px";
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Carousel -->
+<script language="JavaScript" type="text/javascript">
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 3000
+    })
+  });
 </script>
 <footer>
   <div class="row mt-3 bg-white text-dark">
