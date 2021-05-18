@@ -25,6 +25,7 @@ $.when(
   $.getScript( "maps/map3/annotations/funeralHome.js"),
   $.getScript( "maps/map3/annotations/mutualAid.js"),
   $.getScript( "maps/map3/annotations/tremeCommCenter.js"),
+  $.getScript( "maps/map3/annotations/craigSchool.js"),
   $.Deferred(function( deferred ){
       $( deferred.resolve );
   })
