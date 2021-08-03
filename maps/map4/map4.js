@@ -25,6 +25,7 @@ map4.on('dragend', function(e) {
 $.when(
   $.getScript( "maps/map4/annotations/palimpsest.js"),
   $.getScript( "maps/map4/annotations/straightClg.js"),
+  $.getScript( "maps/map4/annotations/professional.js"),
   $.Deferred(function( deferred ){
       $( deferred.resolve );
   })
