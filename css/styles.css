@@ -177,4 +177,12 @@ ul {
   position:absolute;
 }
 
-#
+/* .carousel-inner > .item {
+    position: relative;
+    max-height: 600px;
+}
+.carousel-caption {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-30%);
+} */
