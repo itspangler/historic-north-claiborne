@@ -29,7 +29,7 @@ var professional_coords = [
 ]
 
 var professionalPopup = "<h2><b>Louisiana Undertaking Company</b></h2>" + "<h3>1449 N. Claiborne Avenue</h3>" +
-  "<p>According to the '<a target='blank' href='http://cahpexhibit.georgetown.domains/exhibits/show/global-highways/two'>Claiborne Avenue History Project</a>', this building labeled 'undertaker' was home to the Louisiana Undertaking Company. This company seems to have been founded around 1940 by '<a target='blank' href='http://www.creolegen.org/2015/08/20/the-dejoies-of-new-orleans-part-2-of-2/'>Prudhomme Dejoie</a>', and is notable for a '<a target='blank' href='https://casetext.com/case/louisiana-undertaking-v-louisiana-state-bd-of-em'>1950 court case</a>' involving the use of 'cappers' or 'steerers' – paid representatives who would 'steer' clients toward one company over another.</p>" +
+  "<p>According to the '<a target='blank' href='http://cahpexhibit.georgetown.domains/exhibits/show/global-highways/two'>Claiborne Avenue History Project</a>', this building labeled 'undertaker' was home to the Louisiana Undertaking Company. This company seems to have been founded around 1940 by <a target='blank' href='http://www.creolegen.org/2015/08/20/the-dejoies-of-new-orleans-part-2-of-2/'>Prudhomme Dejoie</a>, and is notable for a <a target='blank' href='https://casetext.com/case/louisiana-undertaking-v-louisiana-state-bd-of-em'>1950 court case</a> involving the use of 'cappers' or 'steerers' – paid representatives who would 'steer' clients toward one company over another.</p>" +
   "<p>Today, this building is home to Professional Funeral Services.</p>";
 
 var professionalPopup_options = {
